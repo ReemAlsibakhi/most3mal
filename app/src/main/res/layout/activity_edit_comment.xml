@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="@dimen/_10sdp"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".activity.EditCommentActivity">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/colorBgSnow"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_10sdp">
+                <TextView
+                    android:id="@+id/tv_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajawal_bold"
+                    android:text="خالد الزهراني"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/colorDark"/>
+
+                <EditText
+                    android:id="@+id/et_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/colorDark"
+                    android:maxHeight="@dimen/_50sdp"
+                    android:inputType="textMultiLine"
+                    android:background="@null"
+                    android:fontFamily="@font/tajawal_medium"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp">
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/canecl"
+                android:fontFamily="@font/tajawal_medium"
+                android:layout_alignParentRight="true"/>
+            <TextView
+                android:id="@+id/tv_update_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toLeftOf="@id/tv_cancel"
+                android:fontFamily="@font/tajawal_medium"/>
+
+        </RelativeLayout>
+    </LinearLayout>

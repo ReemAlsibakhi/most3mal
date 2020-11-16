@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/appbar_blue">
+    <RelativeLayout
+        android:id="@+id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout1"
+            android:layout_width="24dip"
+            android:layout_height="30dip">
+
+            <ImageView
+                android:id="@+id/myButton1"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ic_notifications_24px" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/badge_notification_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/relative_layout1"
+            android:background="@drawable/bg_circle_counter"
+            android:text="20"
+            android:maxLength="4"
+            android:textColor="#FFF"
+            android:textSize="@dimen/_7ssp"
+          />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="@dimen/_21sdp"-->
+<!--    android:layout_height="@dimen/_23sdp"-->
+<!--    android:layoutDirection="rtl"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--  android:background="@color/colorPrimary">-->
+<!--    <ImageView-->
+<!--        android:id="@+id/myButton"-->
+<!--        android:layout_width="@dimen/_16sdp"-->
+<!--        android:layout_height="@dimen/_19sdp"-->
+<!--        android:src="@drawable/ic_notifications_24px"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textOne"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignTop="@id/myButton"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:background="@drawable/bg_circle_counter"-->
+<!--        android:maxLength="4"-->
+<!--        android:text="2"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="@dimen/_8ssp" />-->
+<!--</RelativeLayout>-->

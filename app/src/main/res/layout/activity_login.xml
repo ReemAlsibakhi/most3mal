@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:padding="@dimen/_16sdp"
+    tools:context="com.reemsib.mosta3ml.activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/tajawal_bold"
+        android:text="@string/login"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/colorDark" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="@color/colorDark"
+            android:fontFamily="@font/tajawal_regular"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_login"
+            android:drawableRight="@drawable/ic_user_tie"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ems="10"
+            android:fontFamily="@font/tajawal_medium"
+            android:hint="@string/enter_email1"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textSize="@dimen/_14ssp"
+            android:padding="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="@color/colorDark"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/tajawal_regular"/>
+        <EditText
+            android:id="@+id/et_pswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/border_edit_advert"
+            android:drawableRight="@drawable/ic_unlock_alt"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ems="10"
+            android:hint="@string/enter_pass"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="@dimen/_14sdp"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/tajawal_medium"
+            />
+
+        <TextView
+            android:id="@+id/tv_forgotPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/tajawal_light"
+            android:text="@string/forgot_password"
+            android:textColor="@color/colorPrimary"
+            />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_login"-->
+<!--            style="?android:attr/borderlessButtonStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_50sdp"-->
+<!--            android:layout_marginTop="@dimen/_40sdp"-->
+<!--            android:layout_marginEnd="@dimen/_50sdp"-->
+<!--            android:text="@string/login"-->
+<!--            android:background="@drawable/bg_btn"/>-->
+        <com.kusu.loadingbutton.LoadingButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            app:lb_buttonColor="@color/colorPrimary"
+            app:lb_isShadowEnable="false"
+            app:lb_isCircular="true"
+            app:lb_loaderColor="@android:color/white"
+            app:lb_shadowColor="@color/colorPrimaryDark"
+            app:lb_shadowHeight="5dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:background="@drawable/bg_btn"
+            />
+        <Button
+            android:id="@+id/btn_regiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/register"
+            style="?android:attr/borderlessButtonStyle"
+            android:fontFamily="@font/tajawal_bold"
+            android:background="@drawable/bg_btn_register"
+           />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/skip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/_14ssp"
+        android:drawablePadding="@dimen/_4sdp"
+        android:fontFamily="@font/tajawal_regular"
+        android:drawableLeft="@drawable/ic_double_left_chevron"/>
+
+</RelativeLayout>

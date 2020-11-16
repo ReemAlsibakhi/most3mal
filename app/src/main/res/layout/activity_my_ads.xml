@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingTop="@dimen/_16sdp"
+    android:orientation="vertical"
+    tools:context=".activity.MyAdsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search"
+        android:padding="@dimen/_10sdp">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@null"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ems="10"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:fontFamily="@font/tajawal_medium"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_voice"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            app:srcCompat="@drawable/ic_mic_24px" />-->
+    </RelativeLayout>
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_myAds"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:layout_below="@id/relativeLayout"-->
+<!--        />-->
+    <com.reemsib.mosta3ml.activity.ExpandableHeightGridView
+        android:id="@+id/grid_myAds"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:horizontalSpacing="@dimen/_12sdp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:isScrollContainer="false"
+        android:verticalSpacing="@dimen/_12sdp" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:indicatorColor="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/_16sdp"
+    app:behavior_hideable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_bold"
+            android:text="@string/title_more"
+            android:textColor="@color/colorDark"
+            android:textSize="@dimen/_16ssp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_msgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/border_edittext"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_call"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle_blue"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                android:id="@+id/tv_msgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@id/img_call"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="@string/messages"
+                android:textColor="@color/colorDark" />
+
+            <TextView
+                android:id="@+id/num_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_circle_counter"
+                android:maxLength="4"
+                android:padding="@dimen/_3sdp"
+                android:text="10"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/border_edittext"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_ads"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle_blue"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_ads" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@id/img_ads"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="@string/my_ads"
+                android:textColor="@color/colorDark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/border_edittext"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_about"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_report_24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/img_about"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="@string/about"
+                android:textColor="@color/colorDark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/border_edittext"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_mail"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle_blue"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_call_white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@id/img_mail"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/contact"
+                    android:textColor="@color/colorDark" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableRight="@drawable/ic_gmail"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/email"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/colorDark" />
+
+                <TextView
+                    android:id="@+id/tv_whatapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableRight="@drawable/ic_whatsapp"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/whats_app"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/colorDark" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relative_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/border_edittext"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/circle_blue"
+                app:srcCompat="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/img_logout"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="@string/logout"
+                android:textColor="@color/colorDark" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

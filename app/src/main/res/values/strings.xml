@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">mst3ml</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_more">المزيد</string>
+    <string name="tio_notifications_outlined">tio-notifications_outlined</string>
+    <string name="search">ابحث</string>
+    <string name="city">المدينة</string>
+    <string name="title_activity_test">MainActivity</string>
+    <string name="title_home">الرئيسية</string>
+    <string name="title_advert">اسم الاعلان</string>
+
+    <string name="title_profile">الصفحة الشخصية</string>
+    <string name="title_chat">الرسائل</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="tab_text_1">تسجيل الدخول</string>
+    <string name="tab_text_2">التسجيل</string>
+    <string name="welcome">مرحبا بك !</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="password">كلمة السر</string>
+    <string name="forgot_password">نسيت كلمة السر ؟</string>
+    <string name="recovry_pwd">استعادة كلمة السر</string>
+    <string name="send_pwd">سيتم ارسال كلمة السر الى البريد الالكتروني</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="send">ارسال</string>
+    <string name="mobile">رقم الموبايل</string>
+    <string name="confirmPwd">تأكيد كلمة السر</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="agree_policy">أوافق على الشروط والاحكام</string>
+    <string name="login_using">أو التسجيل باستخدام</string>
+    <string name="register">انشاء حساب جديد</string>
+    <string name="add_advert">أضف اعلانك</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="title_favorite">المفضلة</string>
+    <string name="messages">الرسائل</string>
+    <string name="contact">تواصل معنا</string>
+    <string name="about">من نحن</string>
+    <string name="model">الموديل</string>
+    <string name="gender">الجنس</string>
+    <string name="edit_advert">تعديل الإعلان</string>
+    <string name="add_img">إضافة صور</string>
+    <string name="detail">التفاصيل</string>
+    <string name="select_category">اختر القسم</string>
+    <string name="select_city">اختر المدينة</string>
+    <string name="price">السعر:</string>
+    <string name="soom">على السوم</string>
+    <string name="price2">السعر</string>
+    <string name="not_detect">غير محدد</string>
+    <string name="enter_price">أدخل السعر</string>
+    <string name="save">حفظ</string>
+    <string name="rial">ريال</string>
+    <string name="about_us">من نحن</string>
+    <string name="my_ads">اعلاناتي</string>
+    <string name="whats_app">"واتس اب "</string>
+    <string name="contact_direct">تواصل عبر الخاص</string>
+    <string name="contact_email">تواصل عبر البريد</string>
+    <string name="review">تقييم المعلن</string>
+    <string name="ads_related">إعلانات ذات صلة</string>
+    <string name="see_all">مشاهدة الكل</string>
+    <string name="edit">تعديل</string>
+    <string name="delete">حذف</string>
+    <string name="report_ads">الإبلاغ عن الاعلان</string>
+    <string name="enter_email1">أدخل البريد الالكتروني</string>
+    <string name="enter_pass">أدخل كلمة المرور</string>
+    <string name="new_user">مستخدم جديد</string>
+    <string name="skip">تخطي</string>
+    <string name="enter_username">الرجاء ادخال اسم المستخدم</string>
+    <string name="enter_mobile">"الرجاء إدخال رقم الموبايل "</string>
+    <string name="enter_email">الرجاء إدخال بريد إلكتروني</string>
+    <string name="enter_password">الرجاء إدخال كلمة المرور</string>
+    <string name="enter_confirm_pass">الرجاء إدخال تأكيد كلمة المرور</string>
+    <string name="choose_gender">الرجاء اختيار الجنس</string>
+    <string name="agree_terms">الرجاء وافق على الشروط والأحكام</string>
+    <string name="enter_valid_email">يرجى إدخال بريد إلكتروني صحيح</string>
+    <string name="psd_not_match">كلمة المرور غير مطابقة</string>
+    <string name="enter_password_Length">الرجاء ادخال على الاقل 6 ارقام</string>
+    <string name="register_success">تم التسجيل بنجاح</string>
+    <string name="failed_internet">يرجي الاتصال بالانترنت</string>
+    <string name="enter_username_valid">يرجي ادخال على الأقل ثلاثة حروف</string>
+    <string name="condition_and_term">الأحكام والشروط</string>
+    <string name="select_country">اختار دولة</string>
+    <string name="details">التفاصيل</string>
+    <string name="seller_info">معلومات البائع</string>
+    <string name="intro">المقدمة</string>
+    <string name="select_code">من فضلك اختار مقدمة الجوال</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="logout_success">تم تسجيل الخروج بنجاح</string>
+    <string name="must_log_in">يجب عليك تسجيل الدخول / </string>
+    <string name="login_now"> سجل الآن</string>
+    <string name="allow_negotiation">قابل للتفاوض</string>
+    <string name="accept_negotiation">قابل للتفاوض</string>
+    <string name="allow_reply">السماح بالتعليق على الاعلان</string>
+    <string name="enter_title">من فضلك أدخل عنوان الاعلان</string>
+    <string name="enter_detail">الرجاء ادخال تفاصيل الاعلان</string>
+    <string name="enter_category">الرجاء اختار القسم</string>
+    <string name="enter_city">الرجاء اختار المدينة</string>
+    <string name="choose_price">الرجاء اختيار السعر</string>
+    <string name="write_message">اكتب رسالة.... </string>
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+    <string name="enter_comment">من فضلك أضف تعليقاًا</string>
+    <string name="add_comment">أضف تعليقاً</string>
+    <string name="enter_star">من فضلك قيم المعلن بنجوم</string>
+    <string name="dialogTitle"> حذف  الاعلان من الفضلة </string>
+    <string name="dialogMessage">هل أنت متأكد من هذه العملية؟</string>
+    <string name="yes">نعم</string>
+    <string name="canecl">إلغاء</string>
+    <string name="no">لا</string>
+    <string name="comments">التعليقات</string>
+    <string name="ratings_reviews">التقييمات والمراجعات</string>
+    <string name="comment_added">تم اضافة تعليق</string>
+    <string name="deleteComment">هل تريد بالتأكيد حذف هذا التعليق؟</string>
+    <string name="update">تحديث</string>
+    <string name="fill_feild">املأ هذا الحقل</string>
+
+    <!--    <array name="category">-->
+    <!--        <item>سيارات ومركبات</item>-->
+    <!--        <item>عقارات واملاك</item>-->
+    <!--        <item>تجارة ومشاريع</item>-->
+    <!--        <item>صناعات ونقليات</item>-->
+    <!--        <item>كمبيوترات وإنترنت</item>-->
+    <!--        <item>هواتف وارقام</item>-->
+    <!--        <item>أجهزة وادوات</item>-->
+    <!--        <item>وظائف وخدمات</item>-->
+    <!--        <item>كماليات ومنوعات</item>-->
+    <!--    </array>-->
+    <array name="reports">
+        <item>اعلان غير اخلاقي</item>
+        <item>اعلان عنصري</item>
+        <item>اعلان يمس الدين</item>
+        <item>غير ذلك</item>
+    </array>
+</resources>

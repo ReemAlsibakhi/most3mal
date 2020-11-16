@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linear_categ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/border_edittext">
+        <ImageView
+            android:id="@+id/img_cat"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/car"/>
+        <TextView
+            android:id="@+id/tv_mainCat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="السيارات والمركبات"
+            android:textColor="@color/colorDark"
+            android:layout_marginRight="@dimen/_4sdp"/>
+
+        <ImageButton
+            android:id="@+id/btn_down"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:background="@drawable/arrow_down" />
+    </LinearLayout>
+<!--    <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--        android:id="@+id/expan_subCateg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:ael_duration="400"-->
+<!--        app:ael_expanded="true"-->
+<!--        app:ael_interpolator="accelerate"-->
+<!--        app:ael_orientation="vertical">-->
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rv_subCat"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:scrollbars="none"/>
+      </LinearLayout>
+
+<!--    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
+</LinearLayout>

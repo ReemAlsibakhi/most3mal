@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_margin="@dimen/_3sdp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_calling_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+970"
+        android:maxWidth="@dimen/_40sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/tajawal_regular"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="فلسطين"
+        android:maxWidth="@dimen/_100sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/tajawal_regular"
+        android:maxLines="2"
+        android:layout_marginRight="@dimen/_4sdp"/>
+
+    <TextView
+        android:id="@+id/tv_abbrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:text="(PS)"
+        android:fontFamily="@font/tajawal_regular"
+        />
+    <ImageView
+        android:id="@+id/img_flag"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        tools:srcCompat="@tools:sample/avatars" />
+</LinearLayout>

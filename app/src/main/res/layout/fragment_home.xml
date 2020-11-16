@@ -1,0 +1,78 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:layoutDirection="rtl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/linear_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_12sdp"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:fontFamily="@font/tajawal_medium"
+                android:inputType="textPersonName"
+                />
+<!--            <ImageView-->
+<!--                android:id="@+id/img_voice"-->
+<!--                android:layout_width="@dimen/_11sdp"-->
+<!--                android:layout_height="@dimen/_15sdp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                app:srcCompat="@drawable/ic_mic_24px" />-->
+
+        <Button
+            android:id="@+id/btn_addAdvert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:drawableRight="@drawable/ic_add"
+            android:drawablePadding="@dimen/_1sdp"
+            android:text="@string/add_advert"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:background="@drawable/bg_btn_advert"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/tajawal_regular"
+      />
+
+    </LinearLayout>
+        <GridView
+            android:id="@+id/grid_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:layout_below="@id/linear_search"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/_10sdp"
+            android:horizontalSpacing="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+</RelativeLayout>

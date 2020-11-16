@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_10sdp"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/colorBgSnow"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_10sdp">
+        <TextView
+            android:id="@+id/tv_publisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_bold"
+            android:text="خالد الزهراني"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorDark"/>
+            <RatingBar
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:progressTint="#FFCC01"
+                />
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorDark"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="كم تمشي على الكيلو"/>
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/1/2020"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_gravity="left"
+                android:fontFamily="@font/tajawal_medium"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp">
+        <TextView
+            android:id="@+id/tv_edit_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:fontFamily="@font/tajawal_medium"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/tv_delete_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@id/tv_edit_comment"
+            android:fontFamily="@font/tajawal_medium"/>
+
+    </RelativeLayout>
+</LinearLayout>

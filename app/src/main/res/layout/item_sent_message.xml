@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_8sdp"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_2sdp"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="hi man, how are you?"
+            android:background="@drawable/message_sent_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/_190sdp"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            />
+
+
+<!--        <com.dmallcott.dismissibleimageview.DismissibleImageView-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:visibility="visible"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="@dimen/_10sdp"-->
+<!--            android:id="@+id/send_cam"-->
+<!--            android:src="@drawable/image"-->
+<!--            android:layout_width="@dimen/_120sdp"-->
+<!--            android:layout_height="@dimen/_120sdp"-->
+<!--            />-->
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00 PM"
+            android:textSize="@dimen/_11ssp"
+            android:layout_below="@+id/tv_message">
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

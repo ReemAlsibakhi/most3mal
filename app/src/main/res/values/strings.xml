@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">mst3ml</string>
+    <string name="app_name">مستعجل</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="title_dashboard">Dashboard</string>
@@ -98,6 +98,8 @@
     <string name="enter_city">الرجاء اختار المدينة</string>
     <string name="choose_price">الرجاء اختيار السعر</string>
     <string name="write_message">اكتب رسالة.... </string>
+    <string name="write_msg">اكتب رسالة </string>
+
     <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
     <string name="enter_comment">من فضلك أضف تعليقاًا</string>
     <string name="add_comment">أضف تعليقاً</string>
@@ -113,6 +115,19 @@
     <string name="deleteComment">هل تريد بالتأكيد حذف هذا التعليق؟</string>
     <string name="update">تحديث</string>
     <string name="fill_feild">املأ هذا الحقل</string>
+    <string name="sent_report">تم ارسال البلاغ</string>
+    <string name="failed_sent_report">حدث خطأ اثناء ارسال البلاغ أعد المحاولة</string>
+    <string name="write_note">أضف ملاحظة</string>
+    <string name="please_login">"من فضلك سجل دخول "</string>
+    <string name="not_allowReply">صاحب الاعلان لا يسمح لك بالتعليق</string>
+    <string name="add_imgs_add">من فضلك أدخل صور للاعلان</string>
+    <string name="all_categ">كل الأقسام</string>
+    <string name="not_found_result">لا يوجد نتائج للبحث</string>
+    <string name="all_cities">"كل المدن "</string>
+    <string name="error_email_pass">هناك خطأ في البريد الالكتروني أو كلمة المرور</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="enter_mobile_valid">"الرجاء إدخال رقم صحيح "</string>
+    <string name="email_found">هذا الايميل موجود مسبقا</string>
 
     <!--    <array name="category">-->
     <!--        <item>سيارات ومركبات</item>-->
@@ -131,4 +146,10 @@
         <item>اعلان يمس الدين</item>
         <item>غير ذلك</item>
     </array>
+    <string name="title_activity_maps">Map</string>
+    <string name="allow_location">من فضلك اسمح  بعرض موقعك</string>
+    <string name="select_model">اختر موديل السيارة(اختياري)</string>
+    <string name="updateData">"تحديث بياناتي "</string>
+    <string name="enter_mobile1">"أدخل رقم الموبايل "</string>
+    <string name="km">كم</string>
 </resources>

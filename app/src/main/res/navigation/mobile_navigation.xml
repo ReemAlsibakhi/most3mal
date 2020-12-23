@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.reemsib.mosta3ml.fragment.HomeFragment"
+        android:name="com.reemsib.mst3jl.fragment.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/navigation_favourite"
-        android:name="com.reemsib.mosta3ml.fragment.FavoriteFragment"
+        android:name="com.reemsib.mst3jl.fragment.FavoriteFragment"
         android:label="@string/title_favorite"
         tools:layout="@layout/fragment_favorite" >
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.reemsib.mosta3ml.fragment.ProfileFragment"
+        android:name="com.reemsib.mst3jl.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -37,8 +37,11 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_more"
-        android:name="com.reemsib.mosta3ml.fragment.MoreFragment"
+        android:name="com.reemsib.mst3jl.fragment.MoreFragment"
         android:label="MoreFragment"
-        tools:layout="@layout/fragment_more"/>
+        tools:layout="@layout/fragment_more">
+
+    </fragment>
+
 
 </navigation>

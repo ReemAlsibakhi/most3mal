@@ -7,18 +7,24 @@
 
     <ImageView
         android:id="@+id/img_advert"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_70sdp"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_180sdp"
         android:src="@drawable/car1"
         android:layout_alignParentBottom="true" />
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_delete"
-        android:layout_width="@dimen/_12sdp"
-        android:layout_height="@dimen/_12sdp"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
         android:layout_gravity="start"
-        android:padding="@dimen/_2sdp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/bg_circle_close"
-        app:srcCompat="@drawable/ic_delete"/>
+       android:src="@drawable/ic_delete"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tv_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Reem"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true"/>-->
 </RelativeLayout>

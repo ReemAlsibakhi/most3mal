@@ -6,8 +6,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl"
-    tools:context=".activity.MainActivity">
+    android:background="@android:color/white"
+    android:layoutDirection="rtl">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -54,7 +54,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginEnd="0dp"
                     app:itemBackground="@color/colorPrimary"
-                    app:itemIconSize="@dimen/_18ssp"
+                    app:itemIconSize="24dp"
                     app:itemIconTint="@color/bnv_tab_item_foreground"
                     app:itemTextColor="@color/bnv_tab_item_foreground"
                     app:labelVisibilityMode="unlabeled"
@@ -66,12 +66,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/white"
-                android:src="@drawable/ic_add"
+                android:src="@drawable/ic_add_blue"
                 app:fabCustomSize="@dimen/_35sdp"
                 app:layout_anchor="@id/bottom_bar" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+<!--<TextView-->
+<!--    android:id="@+id/txtLat"-->
+<!--    android:layout_centerInParent="true"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:text=""-->
+<!--    android:layout_height="wrap_content"/>-->
     </RelativeLayout>
 
 <!--    <include layout="@layout/layout_bottom_sheet_report" />-->

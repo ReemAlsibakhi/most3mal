@@ -5,7 +5,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="@dimen/_20sdp"
     android:layoutDirection="rtl">
 
     <LinearLayout
@@ -25,15 +24,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_150sdp">
 
-
-                <ImageView
-                    android:id="@+id/img_paid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:src="@drawable/premium" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/img_paid"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_margin="@dimen/_5sdp"-->
+<!--                    android:src="@drawable/premium" />-->
 
                 <ImageView
                     android:id="@+id/img_advert"
@@ -61,8 +59,8 @@
                     android:maxLines="1"
                     android:text="200"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/_12ssp"/>
-                <ImageButton
+               />
+                <ImageView
                     android:id="@+id/btn_save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,7 +68,24 @@
                     android:padding="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:layout_alignParentLeft="true"
-                    app:srcCompat="@drawable/save_outline" />
+                    android:src="@drawable/save_outline" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btn_save"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_btn_save"-->
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:layout_marginTop="@dimen/_15sdp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    app:srcCompat="@drawable/save_outline" />-->
+                <ImageView
+                    android:id="@+id/img_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/premium" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -101,17 +116,16 @@
                 android:text="18000"
                 android:textColor="@color/colorGreen"
                 android:fontFamily="@font/tajawal_medium"
-
-                android:textSize="@dimen/_12ssp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/_3sdp"
-                android:text="@string/rial"
-                android:fontFamily="@font/tajawal_medium"
-                android:textColor="@color/colorGreen"
-                android:textSize="@dimen/_12ssp"
                 />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="@dimen/_3sdp"-->
+<!--                android:text="@string/rial"-->
+<!--                android:fontFamily="@font/tajawal_medium"-->
+<!--                android:textColor="@color/colorGreen"-->
+<!--                android:textSize="@dimen/_12ssp"-->
+<!--                />-->
         </LinearLayout>
 
         <LinearLayout
@@ -126,7 +140,6 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="2020-10-4"
-                android:textSize="@dimen/_12ssp"
                 android:fontFamily="@font/tajawal_regular"
                 android:layout_marginLeft="@dimen/_10sdp"
                 />
@@ -135,8 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:text="3.8 كم"
-                android:textSize="@dimen/_12ssp"
+                android:text=""
                 android:fontFamily="@font/tajawal_regular"
                 android:background="@drawable/bg_txt_distance"
                 android:padding="@dimen/_5sdp"/>

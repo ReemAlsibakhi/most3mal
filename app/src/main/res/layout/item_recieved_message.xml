@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,11 +11,6 @@
     android:paddingBottom="@dimen/_3sdp"
     android:layoutDirection="ltr">
 
-<!--    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--        android:id="@+id/received_image"-->
-<!--        android:layout_width="@dimen/_40sdp"-->
-<!--        android:layout_height="@dimen/_40sdp"-->
-<!--        android:src="@drawable/image"/>-->
 
     <TextView
         android:id="@+id/tv_message"
@@ -33,23 +29,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="12:00 PM"
-    android:textSize="@dimen/_11ssp"
     android:layout_alignParentEnd="true"
     android:layout_below="@+id/tv_message">
 </TextView>
-
-
-<!--    <com.dmallcott.dismissibleimageview.DismissibleImageView-->
-<!--        android:scaleType="centerCrop"-->
-<!--        android:visibility="gone"-->
-<!--        android:layout_toRightOf="@id/received_image"-->
-<!--        android:id="@+id/received_cam"-->
-<!--        android:src="@drawable/image"-->
-<!--        android:layout_marginStart="@dimen/_5sdp"-->
-<!--        android:layout_width="@dimen/_120sdp"-->
-<!--        android:layout_height="@dimen/_120sdp"-->
-<!--        />-->
-
 
 
 </RelativeLayout>

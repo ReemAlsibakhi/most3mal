@@ -9,17 +9,9 @@
     android:layoutDirection="rtl"
     android:orientation="vertical"
     android:padding="@dimen/_16sdp"
+    android:background="@android:color/white"
     tools:context=".fragment.ProfileFragment">
 
-<!--    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--        android:id="@+id/profile_image"-->
-<!--        android:layout_width="@dimen/_90sdp"-->
-<!--        android:layout_height="@dimen/_90sdp"-->
-<!--        android:src="@drawable/profile"-->
-<!--        app:civ_border_color="@android:color/white"-->
-<!--        app:civ_border_width="@dimen/_1sdp"-->
-<!--        app:civ_circle_background_color="@color/colorPrimary"-->
-<!--        app:flow_verticalAlign="center" />-->
 
    <LinearLayout
        android:id="@+id/linear_login"
@@ -59,9 +51,21 @@
         android:layout_marginTop="@dimen/_16sdp"
         android:fontFamily="@font/tajawal_black"
         android:text=""
-        android:textSize="@dimen/_16ssp"
+        android:textSize="20sp"
         android:textColor="@color/colorPrimary" />
-
+     <Button
+         android:id="@+id/btn_updateData"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:drawableRight="@drawable/ic_edit"
+         android:fontFamily="@font/tajawal_medium"
+         android:textColor="@color/colorDark"
+         android:textSize="16sp"
+         android:background="@null"
+         android:layout_marginTop="@dimen/_10sdp"
+         android:layout_marginBottom="@dimen/_10sdp"
+         android:drawablePadding="@dimen/_5sdp"
+         android:text="@string/updateData"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,12 +87,12 @@
                 android:layout_height="match_parent"
                 android:padding="@dimen/_12sdp">
 
-                <ImageView
-                    android:id="@+id/img_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_edit" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/img_edit"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:src="@drawable/ic_edit" />-->
 
                 <ImageView
                     android:id="@+id/img_mail"
@@ -109,7 +113,7 @@
                     android:text="@string/email"
                     android:textColor="@color/colorDark"
                     android:fontFamily="@font/tajawal_medium"
-                    android:textSize="@dimen/_12ssp" />
+                  />
 
                 <TextView
                     android:id="@+id/tv_email"
@@ -119,7 +123,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:text=""
-                    android:textSize="@dimen/_12ssp" />
+                 />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -138,12 +142,12 @@
                 android:layout_height="match_parent"
                 android:padding="@dimen/_10sdp">
 
-                <ImageView
-                    android:id="@+id/img_editMail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_edit" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/img_editMail"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:src="@drawable/ic_edit" />-->
 
                 <ImageView
                     android:id="@+id/img_call"
@@ -164,7 +168,7 @@
                     android:text="@string/mobile"
                     android:textColor="@color/colorDark"
                     android:fontFamily="@font/tajawal_medium"
-                    android:textSize="@dimen/_12ssp" />
+           />
 
                 <TextView
                     android:id="@+id/tv_mobile"
@@ -174,7 +178,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:text=""
-                    android:textSize="@dimen/_12ssp" />
+                    />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

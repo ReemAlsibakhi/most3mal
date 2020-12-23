@@ -25,7 +25,7 @@
               android:layout_alignParentRight="true"
               android:background="@drawable/bg_circle_counter"
               android:textColor="@android:color/white"
-              android:textSize="@dimen/_7ssp"
+              android:textSize="10sp"
               />
 
 </RelativeLayout>

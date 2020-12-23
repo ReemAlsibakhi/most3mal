@@ -10,6 +10,7 @@
     android:paddingEnd="@dimen/_16sdp"
     android:paddingTop="@dimen/_16sdp"
     android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".fragment.FavoriteFragment">
 
     <RelativeLayout
@@ -31,6 +32,7 @@
             android:layout_marginLeft="@dimen/_5sdp"
             android:gravity="center_vertical"
             android:hint="@string/search"
+            android:textSize="16sp"
             android:fontFamily="@font/tajawal_medium"
             android:inputType="textPersonName"
             android:maxLines="1" />
@@ -52,26 +54,58 @@
 <!--        android:layout_marginTop="@dimen/_10sdp"-->
 <!--        android:layout_below="@id/relativeLayout"-->
 <!-- />-->
-    <com.reemsib.mosta3ml.activity.ExpandableHeightGridView
-        android:id="@+id/grid_favorite"
+    <LinearLayout
+        android:id="@+id/linear_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/relativeLayout"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="@string/must_log_in"
+            android:textColor="@color/colorDark"/>
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="@string/login_now"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+<!--    <com.reemsib.mst3jl.activity.ExpandableHeightGridView-->
+<!--        android:id="@+id/rv_favorite"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/relativeLayout"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:horizontalSpacing="@dimen/_12sdp"-->
+<!--        android:numColumns="2"-->
+<!--        android:visibility="gone"-->
+<!--        android:scrollbars="none"-->
+<!--        android:stretchMode="columnWidth"-->
+<!--        android:isScrollContainer="false"-->
+<!--        android:verticalSpacing="@dimen/_12sdp" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_10sdp"
-        android:horizontalSpacing="@dimen/_12sdp"
-        android:numColumns="2"
-        android:scrollbars="none"
-        android:stretchMode="columnWidth"
-        android:isScrollContainer="false"
-        android:verticalSpacing="@dimen/_12sdp" />
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi"
-        style="@style/AVLoadingIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:indicatorColor="@color/colorPrimary"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
-        app:indicatorName="BallSpinFadeLoaderIndicator" />
+        android:orientation="vertical"
+        android:layout_below="@id/relativeLayout"
+        />
+   <TextView
+       android:id="@+id/tvNot_found"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="لا يوجد لديك محفوظات"
+       android:fontFamily="@font/tajawal_regular"
+       android:textColor="#000"
+       android:visibility="gone"
+       android:layout_centerInParent="true"/>
+
 </RelativeLayout>

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:padding="@dimen/_16sdp"
-    tools:context="com.reemsib.mosta3ml.activity.LoginActivity">
+    android:background="@android:color/white"
+    tools:context="com.reemsib.mst3jl.activity.LoginActivity">
 
     <TextView
         android:id="@+id/title_login"
@@ -16,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/tajawal_bold"
         android:text="@string/login"
-        android:textSize="@dimen/_16ssp"
+        android:textSize="20sp"
         android:textColor="@color/colorDark" />
 
 
@@ -32,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="@string/email"
             android:textColor="@color/colorDark"
-            android:fontFamily="@font/tajawal_regular"/>
+            android:fontFamily="@font/tajawal_medium"/>
 
         <EditText
             android:id="@+id/et_email"
@@ -42,12 +43,13 @@
             android:drawableRight="@drawable/ic_user_tie"
             android:drawablePadding="@dimen/_5sdp"
             android:ems="10"
-            android:fontFamily="@font/tajawal_medium"
+            android:fontFamily="@font/tajawal_regular"
             android:hint="@string/enter_email1"
             android:inputType="textEmailAddress"
             android:maxLines="1"
-            android:textSize="@dimen/_14ssp"
+            android:textSize="16sp"
             android:padding="@dimen/_15sdp"
+            android:textColor="#000"
             android:layout_marginTop="@dimen/_5sdp"
             />
         <TextView
@@ -56,7 +58,7 @@
             android:text="@string/password"
             android:textColor="@color/colorDark"
             android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/tajawal_regular"/>
+            android:fontFamily="@font/tajawal_medium"/>
         <EditText
             android:id="@+id/et_pswd"
             android:layout_width="match_parent"
@@ -69,9 +71,10 @@
             android:hint="@string/enter_pass"
             android:inputType="textPassword"
             android:maxLines="1"
+            android:textSize="16sp"
+            android:textColor="#000"
             android:padding="@dimen/_14sdp"
-            android:textSize="@dimen/_15ssp"
-            android:fontFamily="@font/tajawal_medium"
+            android:fontFamily="@font/tajawal_regular"
             />
 
         <TextView
@@ -80,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/tajawal_light"
+            android:fontFamily="@font/tajawal_regular"
             android:text="@string/forgot_password"
             android:textColor="@color/colorPrimary"
             />
@@ -137,7 +140,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:textColor="@color/colorDark"
-        android:textSize="@dimen/_14ssp"
         android:drawablePadding="@dimen/_4sdp"
         android:fontFamily="@font/tajawal_regular"
         android:drawableLeft="@drawable/ic_double_left_chevron"/>

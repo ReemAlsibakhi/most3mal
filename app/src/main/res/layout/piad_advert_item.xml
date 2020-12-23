@@ -31,7 +31,7 @@
                 android:layout_margin="@dimen/_5sdp"
                 android:src="@drawable/premium" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/img_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                         android:maxLines="1"
                         android:text="FAW فاو"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/_12ssp" />
+                      />
 
                     <TextView
                         android:id="@+id/tv_price"
@@ -75,7 +75,7 @@
                         android:text="18000"
                         android:fontFamily="@font/tajawal_medium"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/_12ssp" />
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -83,7 +83,6 @@
                         android:text="@string/rial"
                         android:fontFamily="@font/tajawal_medium"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/_12ssp"
                         />
 
                 </LinearLayout>
@@ -101,7 +100,7 @@
                     android:maxLines="1"
                     android:text="2020-10-4"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/_11ssp" />
+                  />
 
                 <LinearLayout
                     android:id="@+id/num_views"
@@ -116,7 +115,6 @@
                         android:text="200"
                         android:layout_gravity="center_vertical"
                         android:textColor="@android:color/white"
-                        android:textSize="@dimen/_11ssp"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:fontFamily="@font/tajawal_medium"/>
 

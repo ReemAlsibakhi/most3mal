@@ -5,10 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_16sdp"
+    android:padding="16dp"
     android:fillViewport="true"
     android:scrollbars="none"
-    tools:context="com.reemsib.mosta3ml.activity.AboutUsActivity">
+    android:background="@android:color/white"
+    tools:context="com.reemsib.mst3jl.activity.AboutUsActivity">
 
    <RelativeLayout
        android:layout_width="wrap_content"
@@ -30,17 +31,7 @@
         android:fontFamily="@font/tajawal_bold"
         android:text="@string/about_us"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/_16ssp" />
-
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi"
-        style="@style/AVLoadingIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:indicatorColor="@color/colorPrimary"
-        android:layout_centerInParent="true"
-        app:indicatorName="BallSpinFadeLoaderIndicator" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tv_about_us"
@@ -48,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:lineSpacingMultiplier="1.5"
-        android:text=" "
+        android:textSize="14sp"
         android:fontFamily="@font/tajawal_medium"
         android:textColor="@color/colorDark"
  />

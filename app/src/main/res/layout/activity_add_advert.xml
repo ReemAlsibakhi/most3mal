@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:layoutDirection="rtl"
     android:orientation="vertical"
-    android:padding="@dimen/_16sdp"
+    android:padding="16dp"
     android:scrollbars="none"
     tools:context=".activity.AddAdvertActivity">
 
@@ -38,7 +38,7 @@
                 android:fontFamily="@font/tajawal_bold"
                 android:text="@string/add_advert"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_16ssp"
+                android:textSize="20dp"
                 android:visibility="visible" />
 
             <TextView
@@ -49,7 +49,7 @@
                 android:fontFamily="@font/tajawal_bold"
                 android:text="@string/edit_advert"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_16ssp"
+                android:textSize="20sp"
                 android:visibility="gone" />
         </RelativeLayout>
 
@@ -85,8 +85,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:text="@string/add_img"
-                        android:fontFamily="@font/tajawal_regular"/>
+                        android:fontFamily="@font/tajawal_regular"
+                        android:text="@string/add_img" />
 
                 </LinearLayout>
 
@@ -124,6 +124,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:scrollbars="horizontal" />
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/rv_updateImag"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/_12sdp"-->
+        <!--            android:scrollbars="horizontal" />-->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -151,8 +157,9 @@
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@android:color/white"
                 android:fontFamily="@font/tajawal_medium"
+                android:text="@string/title_advert"
                 android:textColor="@color/colorDark"
-                android:text="@string/title_advert" />
+                android:textSize="16sp" />
 
         </RelativeLayout>
 
@@ -183,9 +190,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@android:color/white"
-                android:text="@string/detail"
                 android:fontFamily="@font/tajawal_medium"
-                android:textColor="@color/colorDark"/>
+                android:text="@string/detail"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
 
         </RelativeLayout>
 
@@ -205,8 +213,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/tajawal_medium"
+                android:text="@string/select_category"
                 android:textColor="@color/colorDark"
-                android:text="@string/select_category" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -232,8 +241,36 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/tajawal_medium"
+                android:text="@string/select_city"
                 android:textColor="@color/colorDark"
-                android:text="@string/select_city" />
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_down" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/select_model_Car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/border_edit_advert"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="@string/select_model"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -247,9 +284,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/tajawal_medium"
-            android:textColor="@color/colorDark"
             android:text="@string/price"
-            android:textSize="@dimen/_10ssp" />
+            android:textColor="@color/colorDark"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -266,55 +303,70 @@
                     android:id="@+id/rb_fixed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:fontFamily="@font/tajawal_medium"
-                    android:textColor="@color/colorDark"
-                    android:text="@string/price2" />
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/colorDark" />
 
                 <RadioButton
                     android:id="@+id/rb_soom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/soom"
                     android:fontFamily="@font/tajawal_medium"
-                    android:textColor="@color/colorDark"/>
+                    android:text="@string/soom"
+                    android:textColor="@color/colorDark" />
 
                 <RadioButton
                     android:id="@+id/rb_undefined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/not_detect"
                     android:fontFamily="@font/tajawal_medium"
-                    android:textColor="@color/colorDark"/>
+                    android:text="@string/not_detect"
+                    android:textColor="@color/colorDark" />
             </RadioGroup>
 
-            <EditText
-                android:id="@+id/et_price"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_edit_advert"
-                android:hint="@string/enter_price"
-                android:inputType="number"
-                android:maxLines="1"
-                android:fontFamily="@font/tajawal_medium"
-                android:textSize="@dimen/_10ssp"
-                android:padding="@dimen/_8sdp" />
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/_10sdp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/_1sdp"
-                android:text="@string/rial"
-                android:fontFamily="@font/tajawal_medium"
-                android:textColor="@color/colorDark"/>
-            <CheckBox
-                android:id="@+id/cb_negotiation"
-                android:layout_width="wrap_content"
-                android:textSize="@dimen/_12ssp"
-                android:text="@string/accept_negotiation"
-                android:fontFamily="@font/tajawal_medium"
-                android:textColor="@color/colorDark"
-                android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edit_advert"
+                        android:fontFamily="@font/tajawal_medium"
+                        android:hint="@string/enter_price"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="@dimen/_8sdp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:fontFamily="@font/tajawal_medium"
+                        android:text="@string/rial"
+                        android:textColor="@color/colorDark" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_negotiation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/accept_negotiation"
+                    android:textColor="@color/colorDark" />
+            </LinearLayout>
+
+
         </LinearLayout>
 
 
@@ -330,9 +382,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/allow_reply"
                 android:fontFamily="@font/tajawal_medium"
-                android:textColor="@color/colorDark"/>
+                android:text="@string/allow_reply"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/allow_reply"
@@ -356,7 +409,8 @@
                 android:fontFamily="@font/tajawal_medium"
                 android:gravity="center_vertical"
                 android:text="السماح بعرض موقعك"
-                android:textColor="@color/colorDark"/>
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/allow_location"
@@ -368,19 +422,17 @@
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_50sdp"
-            android:text="@string/save"
-            android:textColor="@color/white"
-            app:lb_buttonColor="@color/colorPrimary"
-            app:lb_isShadowEnable="false"
-            app:lb_isCircular="true"
-            app:lb_loaderColor="@android:color/white"
-            app:lb_shadowColor="@color/colorPrimaryDark"
-            app:lb_shadowHeight="5dp"
             android:background="@drawable/bg_btn"
             android:fontFamily="@font/tajawal_bold"
-            />
+            android:textColor="@color/white"
+            app:lb_buttonColor="@color/colorPrimary"
+            app:lb_isCircular="true"
+            app:lb_isShadowEnable="false"
+            app:lb_loaderColor="@android:color/white"
+            app:lb_shadowColor="@color/colorPrimaryDark"
+            app:lb_shadowHeight="5dp" />
     </LinearLayout>
 </ScrollView>

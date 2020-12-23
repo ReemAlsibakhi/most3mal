@@ -11,6 +11,8 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="@string/select_country"
+         android:textSize="16sp"
+         android:fontFamily="@font/tajawal_medium"
          android:textColor="@color/colorDark"/>
     <EditText
         android:id="@+id/et_search"
@@ -21,6 +23,8 @@
         android:background="@drawable/border_edittext"
         android:padding="@dimen/_10sdp"
         android:maxLines="1"
+        android:fontFamily="@font/tajawal_medium"
+        android:textSize="16sp"
         />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_countries"
@@ -28,14 +32,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_10sdp"/>
 
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi"
-        style="@style/AVLoadingIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:indicatorColor="@color/colorPrimary"
-        android:layout_gravity="center_horizontal"
-        app:indicatorName="BallSpinFadeLoaderIndicator" />
+
 
 </LinearLayout>

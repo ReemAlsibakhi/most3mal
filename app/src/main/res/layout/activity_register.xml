@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:padding="@dimen/_16sdp"
     android:scrollbars="none"
-    tools:context="com.reemsib.mosta3ml.activity.RegisterActivity">
+    tools:context="com.reemsib.mst3jl.activity.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:fontFamily="@font/tajawal_bold"
             android:text="@string/new_user"
             android:textColor="@color/colorDark"
-            android:textSize="@dimen/_16ssp" />
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,9 +44,9 @@
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:padding="@dimen/_13sdp"
-
-                android:textSize="@dimen/_14ssp"
-                android:fontFamily="@font/tajawal_medium"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/tajawal_regular"
                 />
 
             <LinearLayout
@@ -66,9 +66,10 @@
                     android:hint="@string/mobile"
                     android:inputType="number"
                     android:maxLines="1"
+                    android:textColor="#000"
                     android:padding="@dimen/_13sdp"
-                    android:textSize="@dimen/_14ssp"
-                    android:fontFamily="@font/tajawal_medium"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/tajawal_regular"
                     />
                 <!--            <com.hbb20.CountryCodePicker-->
                 <!--                android:id="@+id/ccp"-->
@@ -88,7 +89,7 @@
                     android:drawablePadding="@dimen/_10sdp"
                     android:padding="@dimen/_10sdp"
                     android:text="@string/intro"
-                    android:textSize="@dimen/_14ssp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/tajawal_medium"
                     android:textColor="@color/colorDark" />
 
@@ -103,8 +104,9 @@
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:textSize="@dimen/_14ssp"
-                android:fontFamily="@font/tajawal_medium"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/tajawal_regular"
                 android:padding="@dimen/_13sdp" />
 
 
@@ -117,8 +119,9 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:textSize="@dimen/_14ssp"
-                android:fontFamily="@font/tajawal_medium"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/tajawal_regular"
                 android:padding="@dimen/_13sdp" />
 
             <EditText
@@ -130,8 +133,9 @@
                 android:hint="@string/confirmPwd"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:textSize="@dimen/_14ssp"
-                android:fontFamily="@font/tajawal_medium"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/tajawal_regular"
                 android:padding="@dimen/_13sdp" />
 
             <LinearLayout
@@ -147,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/tajawal_medium"
                     android:text="@string/gender"
-                    android:textSize="@dimen/_14ssp"
+                    android:textSize="16sp"
                     android:textColor="@color/colorDark" />
 
                 <RadioGroup

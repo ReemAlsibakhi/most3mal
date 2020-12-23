@@ -6,7 +6,9 @@
     android:layoutDirection="rtl"
     android:orientation="vertical"
     android:layout_margin="@dimen/_10sdp"
-    android:padding="@dimen/_10sdp">
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_10sdp"
+    android:paddingTop="@dimen/_10sdp">
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -16,11 +18,11 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:fontFamily="@font/tajawal_medium"
-           android:text=" الزهراني"
+           android:text=" Reem Alsi"
            android:maxLines="1"
            android:layout_gravity="start"
            android:layout_marginEnd="@dimen/_20sdp"
-           android:textSize="@dimen/_15ssp"
+           android:textSize="16sp"
            android:textColor="#000"/>
 
        <View android:layout_width="0dp"
@@ -30,11 +32,11 @@
            android:id="@+id/tv_date"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="12/1/2020"
+           android:text="10/20/98"
            android:maxLines="1"
            android:gravity="end"
            android:fontFamily="@font/tajawal_medium"
-           android:textSize="@dimen/_10sdp"/>
+        />
 
    </LinearLayout>
 
@@ -43,17 +45,18 @@
        android:layout_height="wrap_content"
        android:layout_marginTop="@dimen/_2sdp"
        android:orientation="horizontal">
+
        <TextView
            android:id="@+id/tv_text"
            android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:fontFamily="@font/tajawal_regular"
-           android:text=" كيفك محمود"
-           android:textAlignment="textStart"
-           android:maxLines="1"
-           android:maxWidth="@dimen/_200sdp"
+           android:layout_height="match_parent"
            android:layout_marginEnd="@dimen/_20sdp"
-           android:textColor="@color/colorDark"/>
+           android:fontFamily="@font/tajawal_regular"
+           android:maxWidth="@dimen/_200sdp"
+           android:maxLines="1"
+           android:text=""
+           android:textAlignment="textStart"
+           android:textColor="@color/colorDark" />
 
        <View android:layout_width="0dp"
            android:layout_height="fill_parent"
@@ -70,12 +73,17 @@
            android:paddingEnd="@dimen/_9sdp"
            android:paddingTop="@dimen/_2sdp"
            android:paddingBottom="@dimen/_2sdp"
+           android:visibility="gone"
            android:textColor="@android:color/white"
            android:background="@drawable/num_messages_shape"
            android:fontFamily="@font/tajawal_medium"
-           android:textSize="12sp"/>
+     />
 
    </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorBorder"/>
 
 </LinearLayout>

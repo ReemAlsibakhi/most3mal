@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:padding="@dimen/_16sdp"
     android:layoutDirection="rtl"
+    android:background="@android:color/white"
     tools:context=".activity.chat.MessagesActivity">
 <LinearLayout
     android:layout_width="match_parent"
@@ -22,7 +23,7 @@
         android:fontFamily="@font/tajawal_medium"
         android:text="@string/messages"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/_18ssp" />
+        android:textSize="20sp" />
 
 
     <EditText
@@ -37,6 +38,7 @@
         android:hint="@string/search"
         android:inputType="textPersonName"
         android:maxLines="1"
+        android:textSize="16sp"
         android:layout_marginTop="@dimen/_8sdp"
         android:padding="@dimen/_10sdp" />
 
@@ -47,14 +49,5 @@
         android:layout_marginTop="@dimen/_10sdp" />
 </LinearLayout>
 
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi"
-        style="@style/AVLoadingIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        android:layout_centerInParent="true"
-        app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="BallSpinFadeLoaderIndicator" />
 
 </RelativeLayout>

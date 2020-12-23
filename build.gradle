@@ -7,7 +7,7 @@ buildscript {
 
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "com.android.tools.build:gradle:4.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.google.gms:google-services:4.3.4'
 
@@ -22,10 +22,12 @@ allprojects {
         jcenter()
         maven {url "https://maven.google.com"}
         maven { url "https://jitpack.io" }
+        maven {url "https://dl.bintray.com/cometchat/pro"}
+        }
 
     }
 
-}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

@@ -21,18 +21,9 @@
         android:text="@string/model"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/holo_red_light"
-        android:textSize="@dimen/_14ssp"
+        android:textSize="18sp"
         android:layout_marginTop="@dimen/_10sdp"/>
 
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi_model"
-        style="@style/AVLoadingIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:visibility="visible"
-        android:layout_gravity="center_horizontal"
-        app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="BallRotateIndicator" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_model"

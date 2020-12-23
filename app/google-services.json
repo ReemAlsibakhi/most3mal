@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "640054791357",
-    "firebase_url": "https://most3ml-3319c.firebaseio.com",
-    "project_id": "most3ml-3319c",
-    "storage_bucket": "most3ml-3319c.appspot.com"
+    "project_number": "370256887169",
+    "project_id": "mst3jl-6ce01",
+    "storage_bucket": "mst3jl-6ce01.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:640054791357:android:88603c2be1b6165b4efbd4",
+        "mobilesdk_app_id": "1:370256887169:android:92b86ba10614a1dc6f7c80",
         "android_client_info": {
-          "package_name": "com.reemsib.mosta3ml"
+          "package_name": "com.reemsib.mst3jl"
         }
       },
       "oauth_client": [
         {
-          "client_id": "640054791357-ltidtur0t1te0f0t6p15ibdir4g0lpam.apps.googleusercontent.com",
+          "client_id": "370256887169-u5kdqq5isdqib2c93fe9atul27k74s5u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCLF8TM6YBpa77_x8tADgDsBg36u00y9TU"
+          "current_key": "AIzaSyC1wxta1BxE85GI7hlTsP-jciXOj9CZ1_4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "640054791357-ltidtur0t1te0f0t6p15ibdir4g0lpam.apps.googleusercontent.com",
+              "client_id": "370256887169-u5kdqq5isdqib2c93fe9atul27k74s5u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -22,7 +22,8 @@
             android:fontFamily="@font/tajawal_bold"
             android:text="@string/title_more"
             android:textColor="@color/colorDark"
-            android:textSize="@dimen/_16ssp" />
+            android:textSize="16sp"
+            />
 
         <RelativeLayout
             android:id="@+id/relative_msgs"
@@ -50,6 +51,7 @@
                 android:layout_toLeftOf="@id/img_call"
                 android:fontFamily="@font/tajawal_medium"
                 android:text="@string/messages"
+                android:textSize="16sp"
                 android:textColor="@color/colorDark" />
 
             <TextView
@@ -60,7 +62,8 @@
                 android:background="@drawable/bg_circle_counter"
                 android:maxLength="4"
                 android:padding="@dimen/_3sdp"
-                android:text="10"
+                android:text="0"
+                android:visibility="gone"
                 android:textColor="@android:color/white" />
         </RelativeLayout>
 
@@ -89,6 +92,7 @@
                 android:layout_toLeftOf="@id/img_ads"
                 android:fontFamily="@font/tajawal_medium"
                 android:text="@string/my_ads"
+                android:textSize="16sp"
                 android:textColor="@color/colorDark" />
 
         </RelativeLayout>
@@ -116,6 +120,7 @@
                 android:layout_toLeftOf="@+id/img_about"
                 android:fontFamily="@font/tajawal_medium"
                 android:text="@string/about"
+                android:textSize="16sp"
                 android:textColor="@color/colorDark" />
 
         </RelativeLayout>
@@ -161,6 +166,7 @@
                     android:drawableRight="@drawable/ic_gmail"
                     android:fontFamily="@font/tajawal_medium"
                     android:text="@string/email"
+                    android:textSize="16sp"
                     android:drawablePadding="@dimen/_5sdp"
                     android:textColor="@color/colorDark" />
 
@@ -172,6 +178,7 @@
                     android:drawableRight="@drawable/ic_whatsapp"
                     android:fontFamily="@font/tajawal_medium"
                     android:text="@string/whats_app"
+                    android:textSize="16sp"
                     android:drawablePadding="@dimen/_5sdp"
                     android:textColor="@color/colorDark" />
 
@@ -204,6 +211,7 @@
                 android:layout_toLeftOf="@+id/img_logout"
                 android:fontFamily="@font/tajawal_medium"
                 android:text="@string/logout"
+                android:textSize="16sp"
                 android:textColor="@color/colorDark" />
 
         </RelativeLayout>

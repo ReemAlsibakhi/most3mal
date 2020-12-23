@@ -35,14 +35,14 @@
                      android:layout_centerHorizontal="true"
                     app:srcCompat="@drawable/logo" />
 
-                <include
-                    layout="@layout/bell"
-                    android:layout_alignParentLeft="true"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_width="@dimen/_36sdp"
-                    android:layout_centerVertical="true">
+<!--                <include-->
+<!--                    layout="@layout/bell"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_height="@dimen/_35sdp"-->
+<!--                    android:layout_width="@dimen/_36sdp"-->
+<!--                    android:layout_centerVertical="true">-->
 
-                </include>
+<!--                </include>-->
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 

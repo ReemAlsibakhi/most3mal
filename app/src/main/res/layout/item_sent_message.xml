@@ -31,23 +31,11 @@
             />
 
 
-<!--        <com.dmallcott.dismissibleimageview.DismissibleImageView-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:visibility="visible"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_marginEnd="@dimen/_10sdp"-->
-<!--            android:id="@+id/send_cam"-->
-<!--            android:src="@drawable/image"-->
-<!--            android:layout_width="@dimen/_120sdp"-->
-<!--            android:layout_height="@dimen/_120sdp"-->
-<!--            />-->
-
         <TextView
             android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="12:00 PM"
-            android:textSize="@dimen/_11ssp"
             android:layout_below="@+id/tv_message">
         </TextView>
 

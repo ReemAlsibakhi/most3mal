@@ -1,0 +1,45 @@
+package com.reemsib.mst3jl.utils
+
+class URLs {
+    companion object{
+        const val ROOT_URL = "https://mst3jl.com/api/"
+        const val URL_REGISTER =  ROOT_URL + "register"
+        const val URL_LOGIN = ROOT_URL + "login"
+        const val URL_LOGOUT = ROOT_URL + "logout"
+        const val URL_USER_INFO = ROOT_URL + "getUserInfo"
+        const val URL_RESET_PASSWORD = ROOT_URL + "reset-password/create"
+        const val URL_SETTING = ROOT_URL + "getSetting"
+        const val URL_COUNTRIES = ROOT_URL + "getCountries"
+        const val URL_CITIES = ROOT_URL + "getCities"
+        const val URL_YEARS = ROOT_URL + "getYears"
+        const val URL_MAIN_CATEGORIES = ROOT_URL + "getMainCategories"
+        const val URL_SUB_CATEGORIES = ROOT_URL + "getSubCategories"
+        const val URL_SUB_CATEGORIES_TO_CATEGORY = ROOT_URL + "getSubCategoriesToCategory/"
+        const val URL_ADVERT_IN_CATEGORY = ROOT_URL + "showAdvertisementInCategory/"
+        const val URL_ADVERT_INFO = ROOT_URL + "showAdvertisementInformation/"
+        const val URL_CREATE_ADVERT = ROOT_URL + "createAdvertisement"
+        const val URL_FREE_ADVERTS = ROOT_URL + "getFreeAdvertisements"
+        const val URL_PAID_ADVERTS = ROOT_URL + "getPaidAdvertisements"
+        const val URL_MAIN_SUB_CAT = ROOT_URL + "getMainCategoriesWithSubCategories"
+        const val URL_MY_ADVERT = ROOT_URL + "getMyAdvertisements"
+        const val URL_DELETE_MY_ADVERT = ROOT_URL + "deleteMyAdvertisements"
+        const val URL_USER_CHAT = ROOT_URL + "getUserChat"
+        const val URL_CHAT_INFO = ROOT_URL + "showChatInfo/"
+        const val URL_SEND_MESSAGE = ROOT_URL + "sendMessage"
+        const val URL_NEW_CHAT = ROOT_URL + "newChat"
+        const val URL_ADD_COMMENT = ROOT_URL + "createReview"
+        const val URL_DELETE_REVIEW= ROOT_URL + "deleteReview"
+        const val URL_EDIT_REVIEW= ROOT_URL + "editReview/"
+        const val URL_ADD_FAVORITE = ROOT_URL + "addFavorite"
+        const val URL_GET_MY_FAVORITE = ROOT_URL + "getMyFavorite"
+        const val URL_DELETE_FAVORITE = ROOT_URL + "deleteMyFavorite"
+        const val URL_REPORTING_ADVERT = ROOT_URL + "reportingAdvertisement"
+        const val URL_ADVERTS = ROOT_URL + "getAdvertisements"
+        const val URL_SUB_CATEGORIES_COMPANY = ROOT_URL + "getCategoryCompanies/"
+        const val URL_GET_NOTIFICATION = ROOT_URL + "getNotification"
+        const val URL_UPDATE_PROFILE = ROOT_URL + "updateUserProfile"
+        const val SERVER_KEY = "AAAAVjUHvYE:APA91bEjlXWsXHdjo1xBS7t9cLpN9IaZ11PDmm3HjK2vUuXoArHynZov3q0G94-0QSOQ2Ejr_naHN8gDmFFJEKcJC4RyDBpFH65EQ-vBpE5_C2qF-NPF535FqUnm_KQCwCezbGIfyd8s"
+
+//        ehnkK0LqQNmjcGm5uqQngI:APA91bESZfNuZTaKz0pYdJhJoIkFie_iADvn5Lkx7Ao0WtRT7S3-lXZkpfGh01kiRiwAlANO-wIzgP8tSpjEsNB2kC1skEtbZ92QGm_UEbZhX9eOz0_z88x9yPDAR7JI6hEaVNtsGRTH
+    }
+}

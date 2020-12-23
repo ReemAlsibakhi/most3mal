@@ -3,7 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layoutDirection="rtl"
+    android:background="@android:color/white"
     android:orientation="vertical">
     <LinearLayout
         android:id="@+id/linear_categ"
@@ -25,6 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/tajawal_medium"
             android:text="السيارات والمركبات"
+            android:textSize="16sp"
             android:textColor="@color/colorDark"
             android:layout_marginRight="@dimen/_4sdp"/>
 
@@ -39,20 +42,21 @@
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        app:ael_duration="400"-->
-<!--        app:ael_expanded="true"-->
+<!--        app:ael_expanded="false"-->
 <!--        app:ael_interpolator="accelerate"-->
 <!--        app:ael_orientation="vertical">-->
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
+<!--      <LinearLayout-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:orientation="vertical">-->
           <androidx.recyclerview.widget.RecyclerView
               android:id="@+id/rv_subCat"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:scrollbars="none"/>
+              android:scrollbars="none"
+              android:visibility="gone"/>
       </LinearLayout>
 
 <!--    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
-</LinearLayout>
+<!--</LinearLayout>-->

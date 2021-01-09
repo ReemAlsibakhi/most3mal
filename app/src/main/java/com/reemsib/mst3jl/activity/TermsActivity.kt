@@ -25,7 +25,7 @@ class TermsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_politics)
 
         Hawk.init(this).build();
-        myDialog=BaseActivity.loading(applicationContext)
+        myDialog=BaseActivity.loading(TermsActivity@this)
         if(Hawk.contains(Constants.TERMS)) {
             tv_condition_term.text= Hawk.get(Constants.TERMS)
         }

@@ -123,8 +123,8 @@ class RegisterActivity : AppCompatActivity(),View.OnClickListener{
             },
             Response.ErrorListener { error ->
                 btn_regiter.hideLoading()
-                  Toast.makeText(applicationContext, R.string.failed_internet, Toast.LENGTH_SHORT).show()
-               // Toast.makeText(applicationContext, error.message, Toast.LENGTH_SHORT).show()
+              //    Toast.makeText(applicationContext, R.string.failed_internet, Toast.LENGTH_SHORT).show()
+               Toast.makeText(applicationContext, error.message.toString(), Toast.LENGTH_SHORT).show()
             }) {
 
             override fun getParams(): MutableMap<String, String> {

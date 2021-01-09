@@ -229,12 +229,8 @@ class ChatRoomActivity : AppCompatActivity(), View.OnClickListener {
         rv_chatLog.setHasFixedSize(true)
         rv_chatLog.layoutManager = LinearLayoutManager(this)
         rv_chatLog.adapter = mChatRoomAdapter
-        if (mChatRoomAdapter!!.itemCount > 1)
-            rv_chatLog.layoutManager!!.smoothScrollToPosition(
-                rv_chatLog,
-                null,
-                mChatRoomAdapter!!.itemCount - 1
-            ) }
+       rv_chatLog.scrollToPosition(chatRoomList.size-1)
+    }
     override fun onStart() {
         super.onStart()
         active = true

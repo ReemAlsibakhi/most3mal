@@ -4,8 +4,24 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
+import android.widget.Toast
+import com.android.volley.AuthFailureError
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.StringRequest
+import com.google.gson.Gson
+import com.google.gson.JsonParser
+import com.orhanobut.hawk.Hawk
 import com.reemsib.mst3jl.R
+import com.reemsib.mst3jl.adapter.ChatsAdapter
+import com.reemsib.mst3jl.model.ChatRoom
+import com.reemsib.mst3jl.setting.MySingleton
 import com.reemsib.mst3jl.setting.PreferencesManager
+import com.reemsib.mst3jl.utils.Constants
+import com.reemsib.mst3jl.utils.URLs
+import org.json.JSONException
+import org.json.JSONObject
 
 class SplachActivity : AppCompatActivity() {
 
@@ -29,5 +45,8 @@ class SplachActivity : AppCompatActivity() {
             }
 
         }, 4000)
+
     }
+
+
 }

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layoutDirection="rtl"
+    android:background="#fff"
+    tools:context=".activity.UpdateProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/updateData"
+        android:textSize="20sp"
+        android:fontFamily="@font/tajawal_bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="@string/email"
+            android:textColor="@color/colorDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_edit_login"
+            android:drawableRight="@drawable/ic_user_tie"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ems="10"
+            android:fontFamily="@font/tajawal_regular"
+            android:hint="@string/enter_email1"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/_15sdp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="@string/mobile"
+            android:textColor="@color/colorDark"
+            app:layout_constraintBottom_toTopOf="@+id/et_mobile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+        <EditText
+            android:id="@+id/et_mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_login"
+            android:drawableRight="@drawable/ic_user_tie"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ems="10"
+            android:fontFamily="@font/tajawal_regular"
+            android:hint="@string/enter_mobile1"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="@dimen/_15sdp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMobile" />
+
+        <com.kusu.loadingbutton.LoadingButton
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_btn"
+            android:fontFamily="@font/tajawal_bold"
+            android:text="@string/update"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_mobile"
+            app:lb_buttonColor="@color/colorPrimary"
+            app:lb_isCircular="true"
+            app:lb_isShadowEnable="false"
+            app:lb_loaderColor="@android:color/white"
+            app:lb_shadowColor="@color/colorPrimaryDark"
+            app:lb_shadowHeight="5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

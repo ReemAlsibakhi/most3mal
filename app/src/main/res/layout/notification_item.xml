@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="10dp"
+    android:layoutDirection="rtl"
+    android:background="@drawable/item_bg_selector_model">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تعليق جديد"
+        android:textSize="16sp"
+        android:fontFamily="@font/tajawal_bold"
+        android:textColor="@color/colorDark" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/tajawal_medium"
+        android:text="تم التعليق على الاعلانواحد جديد تست"
+        android:layout_marginTop="@dimen/_4sdp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28/10/1996"
+        android:textSize="12sp"
+        android:fontFamily="@font/tajawal_regular"
+        android:layout_marginTop="@dimen/_4sdp"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorBorder"/>
+</LinearLayout>

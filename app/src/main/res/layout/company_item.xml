@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/_7sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:background="@drawable/item_bg_selector">
+        <ImageView
+            android:id="@+id/img_comp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/car"/>
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDark"
+            android:fontFamily="@font/tajawal_regular"
+            android:text="السيارات والمركبات"
+            android:layout_marginRight="@dimen/_4sdp"/>
+
+    </LinearLayout>

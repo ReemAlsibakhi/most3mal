@@ -476,12 +476,8 @@ class AdvertDetailActivity : AppCompatActivity(),View.OnClickListener {
     }
     private fun scrollToBottom() {
         commentAdapter!!.notifyDataSetChanged()
-        if (commentAdapter!!.itemCount > 1)
-            rv_Comments.layoutManager!!.smoothScrollToPosition(
-                rv_Comments,
-                null,
-                commentAdapter!!.itemCount - 1
-            ) }
+        rv_Comments.scrollToPosition(commentList.size-1)
+    }
     private fun fillData(advert: Advert) {
         tv_advertTitle.text=advert.title
         when(advert.price_type){
@@ -605,6 +601,7 @@ class AdvertDetailActivity : AppCompatActivity(),View.OnClickListener {
         }else if(requestCode == 2){
             if (resultCode == Activity.RESULT_OK) {
                  advertId=data!!.getIntExtra(Constants.ADVERT_ID, -1)
+                sliderImg.clear()
                  getAdvertInfo(advertId!!)
             }
             if (resultCode == Activity.RESULT_CANCELED) {

@@ -17,6 +17,7 @@ import com.reemsib.mst3jl.adapter.ImageTypeAdapter
 import com.reemsib.mst3jl.fragment.ModelBottomSheetFragment
 import com.reemsib.mst3jl.model.Advert
 import com.reemsib.mst3jl.model.Image
+import com.reemsib.mst3jl.model.SubCategory
 import com.reemsib.mst3jl.setting.PreferencesManager
 import com.reemsib.mst3jl.utils.Constants
 import com.vansuita.pickimage.bean.PickResult
@@ -43,14 +44,16 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
     private lateinit var advert:Advert
     private lateinit var manager: PreferencesManager
     var priceType: String =""
-    var  title :String=""
-    var description:String =""
-    var price:String =""
+    var  title :String?=null
+    var description:String?=null
+    var price:String ?=null
     lateinit var  acceptNego:String
     lateinit var  allowRep :String
+    lateinit var  allowShowMobile :String
     var offerLoc :String="0"
     lateinit var  fromUpdate :String
     private var customDialogModel = ModelBottomSheetFragment()
+    private var subCat:SubCategory?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +63,7 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         select_category.setOnClickListener(this)
         select_city.setOnClickListener(this)
         select_model_Car.setOnClickListener(this)
+        btn_back_add.setOnClickListener(this)
         manager= PreferencesManager(applicationContext)
         initRecyImagesUpdate()
         val i=intent
@@ -89,9 +93,15 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         tv_cityTit.setText(advert.city.title)
         categoryId=advert.category.id.toString()
         cityId=advert.city.id.toString()
-//        if (advert.year!=null){
-//            tv_model.setText(advert.year.year)
-//        }
+        if (advert.category.has_models==1){
+            select_model_Car.visibility=View.VISIBLE
+            if (advert.year!=null){
+                yearId=advert.year!!.id.toString()
+                tv_model.setText(advert.year!!.year)
+            }
+        }else{
+            select_model_Car.visibility=View.GONE
+        }
         Log.e("advert_id", advert.id.toString())
         when(advert.price_type){
             "fixed" -> {
@@ -99,9 +109,9 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
                 et_price.setText(advert.price.toString())
                 Log.e("adv_type", advert.adv_type)
             }
-            "un_limited" -> {
-                rb_undefined.isChecked = true
-            }
+//            "un_limited" -> {
+//                rb_undefined.isChecked = true
+//            }
             "on_somme" -> {
                 rb_soom.isChecked = true
             }
@@ -115,6 +125,9 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         }
         if (advert.allow_offer_location==1){
             allow_location.isChecked=true
+        }
+        if (advert.allow_to_show_mobile==1){
+            allow_mobile.isChecked=true
         }
         imgsArray=advert.images
         initRecyImagesUpdate()
@@ -162,6 +175,9 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
     }
     override fun onClick(p0: View?) {
         when(p0!!.id){
+            R.id.btn_back_add->{
+                finish()
+            }
             R.id.linear_upload -> {
                 PickImageDialog.build(PickSetup()).show(this)
             }
@@ -182,9 +198,10 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
                 startActivityForResult(i, 1)
 //                startActivityForResult(Intent(this, CitiesActivity::class.java), 1);
             }
-          R.id.select_model_Car->{
+            R.id.select_model_Car->{
               showDialogSheet()
-         }
+           }
+
         }
     }
     private fun showDialogSheet() {
@@ -235,6 +252,7 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         params.put("category_id", categoryId)
         params.put("city_id", cityId)
         params.put("year_id", yearId)
+        params.put("allow_to_show_mobile", allowShowMobile)
 
         for (i in 0 until array!!.size) {
             try {
@@ -351,6 +369,7 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         params.put("category_id", categoryId)
         params.put("city_id", cityId)
         params.put("year_id", yearId)
+        params.put("allow_to_show_mobile", allowShowMobile)
 
         for (i in 0 until array!!.size) {
             try {
@@ -441,9 +460,14 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
          title = et_title.text.toString()
          description=et_detail.text.toString()
          price = et_price.text.toString()
+         val category=tv_category.text.toString()
+         val city=tv_cityTit.text.toString()
+         val model=tv_model.text.toString()
+
         val negotiation = cb_negotiation.isChecked
         val allowReply = allow_reply.isChecked
         val allowLocation = allow_location.isChecked
+        val allowMobile = allow_mobile.isChecked
         when(rg_price.checkedRadioButtonId){
             R.id.rb_fixed -> {
                 priceType = "fixed"
@@ -454,58 +478,65 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
                 priceType = "on_somme"
 
             }
-            R.id.rb_undefined -> {
-                price = "0"
-                priceType = "un_limited"
-
-            }
+//            R.id.rb_undefined -> {
+//                price = "0"
+//                priceType = "un_limited"
+//
+//            }
         }
           acceptNego = if(negotiation){ "1" }else{ "0" }
           allowRep = if(allowReply){ "1" }else{ "0" }
           offerLoc = if(allowLocation){ "1" }else{ "0" }
+          allowShowMobile = if(allowMobile){ "1" }else{ "0" }
 
         when {
-            title=="" -> {
-                et_title.error = getString(R.string.enter_title)
-                et_title.requestFocus()
-                valid = false
-            }
-            description==""-> {
-                et_detail.error = getString(R.string.enter_detail)
-                et_detail.requestFocus()
-                valid = false
-
-            }
-            categoryId=="" -> {
-             Toast.makeText(this, getString(R.string.enter_category), Toast.LENGTH_LONG).show()
-                valid = false
-
-            }
-            cityId=="" -> {
-             Toast.makeText(this, getString(R.string.enter_city), Toast.LENGTH_LONG).show()
-                valid = false
-
-            }
-            priceType.isEmpty()->{
-                 Toast.makeText(this, getString(R.string.choose_price), Toast.LENGTH_LONG).show()
-                valid = false
-            }
-            offerLoc=="0"->{
-                Toast.makeText(this, getString(R.string.allow_location), Toast.LENGTH_LONG).show()
-                valid = false
-            }
             array!!.isEmpty()-> {
                 Toast.makeText(this, getString(R.string.add_imgs_add), Toast.LENGTH_LONG).show()
                 Log.e("add_advert_not_update", "rrr")
                 valid = false
             }
-
-            priceType=="fixed" ->{
-                 if(price==""){
-                     et_price.error=getString(R.string.enter_price)
-                     valid = false
-                 }
+            title!!.isEmpty() -> {
+                et_title.error = getString(R.string.enter_title)
+                et_title.requestFocus()
+                valid = false
             }
+            description!!.isEmpty()-> {
+                et_detail.error = getString(R.string.enter_detail)
+                et_detail.requestFocus()
+                valid = false
+
+            }
+            category.equals(getString(R.string.select_category)) -> {
+             Toast.makeText(this, getString(R.string.enter_category), Toast.LENGTH_LONG).show()
+                valid = false
+
+            }
+           city.equals(getString(R.string.select_city)) -> {
+             Toast.makeText(this, getString(R.string.enter_city), Toast.LENGTH_LONG).show()
+                valid = false
+
+            }
+
+            priceType.isEmpty()->{
+                 Toast.makeText(this, getString(R.string.choose_price), Toast.LENGTH_LONG).show()
+                valid = false
+            }
+            priceType=="fixed" && price!!.isEmpty()-> {
+//                if (price!!.isEmpty()) {
+                et_price.error = getString(R.string.enter_price)
+                valid = false
+//                }
+            }
+            offerLoc=="0"->{
+                Toast.makeText(this, getString(R.string.allow_location), Toast.LENGTH_LONG).show()
+                valid = false
+            }
+            subCat!!.has_models==1 && yearId=="" -> {
+                    Toast.makeText(this, getString(R.string.select_model), Toast.LENGTH_LONG).show()
+                    valid = false
+
+            }
+
 
         }
         return valid
@@ -526,16 +557,22 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
 
             }
             if (resultCode == RESULT_CANCELED) {
-                tv_cityTit.text=getString(R.string.select_city)
+             //   tv_cityTit.text=getString(R.string.select_city)
             }
         }else if(requestCode==2){
             if (resultCode == RESULT_OK) {
-                categoryId = data!!.getIntExtra("catId", -1).toString()
-                val category = data.getStringExtra("name_categ")!!
-                tv_category.text=category
+                subCat = data!!.getParcelableExtra<SubCategory>("category")!!
+                categoryId= subCat!!.id.toString()
+                tv_category.text= subCat!!.name
+                if (subCat!!.has_models==1){
+                    select_model_Car.visibility=View.VISIBLE
+                }else{
+                    select_model_Car.visibility=View.GONE
+
+                }
             }
             if (resultCode == RESULT_CANCELED) {
-                tv_cityTit.text=getString(R.string.select_city)
+               // tv_category.text=getString(R.string.select_category)
             }
         }
     }

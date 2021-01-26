@@ -15,7 +15,7 @@ class SubCategAdapter(var activity: Activity, var data: MutableList<SubCategory>
     var mListener: OnItemClickListener?=null
 
     interface OnItemClickListener {
-        fun onClicked(clickedItemPosition: Int, id:Int,category: String)
+        fun onClicked(clickedItemPosition: Int, subCategory: SubCategory)
     }
     fun setOnItemClickListener(listener: OnItemClickListener) {
         mListener = listener
@@ -41,7 +41,8 @@ class SubCategAdapter(var activity: Activity, var data: MutableList<SubCategory>
 
         holder.itemView.setOnClickListener {
             if (mListener != null) {
-                mListener!!.onClicked(position, data[position].id,data[position].name)
+                mListener!!.onClicked(position, data[position])
+//                mListener!!.onClicked(position, data[position].id,data[position].name)
 
             }
         }

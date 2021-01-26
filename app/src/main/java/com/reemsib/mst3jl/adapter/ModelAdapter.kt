@@ -52,7 +52,7 @@ class ModelAdapter(var activity: Activity, var data: ArrayList<ModelYear>) :
                     notifyDataSetChanged()
                 }
                 selectedPos =holder.getAdapterPosition();
-                mListener!!.onClicked(position, data[position].id,data[position].year)
+                mListener!!.onClicked(position, data[position].id,data[position].year!!)
                 notifyDataSetChanged();
 
             }

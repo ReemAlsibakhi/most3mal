@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
@@ -56,7 +55,6 @@ class HomeFragment : Fragment(),View.OnClickListener {
         myDialog=BaseActivity.loading(requireContext())
         manager=PreferencesManager(requireContext())
         btn_addAdvert.setOnClickListener(this)
-
 
         getMainCategories()
         if(Hawk.contains(Constants.MAIN_CATEGORIES)){
@@ -125,7 +123,7 @@ class HomeFragment : Fragment(),View.OnClickListener {
                         }
 
                         if (isAdded && mCategoryList.isNotEmpty()) {
-                            mCategoryList.add(0, MainCategory(0,getString(R.string.all_categ),"all"))
+                            mCategoryList.add(0, MainCategory(0,getString(R.string.all_categ),"all",0))
                             mCategoryAdapter = MainCategoryAdapter(requireActivity(), mCategoryList,"home")
                             buildGridView()
                             mCategoryAdapter!!.notifyDataSetChanged()
@@ -151,11 +149,11 @@ class HomeFragment : Fragment(),View.OnClickListener {
         grid_category!!.layoutManager = layoutManager
         grid_category!!.adapter = mCategoryAdapter
         mCategoryAdapter!!.setOnItemClickListener(object : MainCategoryAdapter.OnItemClickListener {
-            override fun onClicked(clickedItemPosition: Int, id: Int, name: String) {
+
+            override fun onClicked(clickedItemPosition: Int, id: Int, name: String,has_models:Int) {
                 val i = Intent(requireActivity(), AdvertsActivity::class.java)
                 i.putExtra(Constants.MAIN_CATEGORIES_ID, id.toString())
                 startActivity(i)
-
 //                if (id==0){
 
                   //  i.putExtra(Constants.ALL_CATEGORIES, "ALL_CAT")

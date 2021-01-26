@@ -57,6 +57,7 @@
 
     </androidx.cardview.widget.CardView>
     <RelativeLayout
+        android:id="@+id/edit_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"

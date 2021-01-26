@@ -21,13 +21,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/btn_back"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
+<!--            <Button-->
+<!--                android:id="@+id/btn_back_add"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:background="@drawable/bg_btn_back"-->
+<!--                android:text="22222"-->
+<!--             />-->
+            <ImageView
+                android:id="@+id/btn_back_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/bg_btn_back"
+                android:padding="5dp"
                 android:src="@drawable/ic_arrow_right" />
 
             <TextView
@@ -260,6 +270,7 @@
             android:background="@drawable/border_edit_advert"
             android:gravity="center_vertical"
             android:orientation="horizontal"
+            android:visibility="gone"
             android:padding="@dimen/_10sdp">
 
             <TextView
@@ -316,13 +327,13 @@
                     android:text="@string/soom"
                     android:textColor="@color/colorDark" />
 
-                <RadioButton
-                    android:id="@+id/rb_undefined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/tajawal_medium"
-                    android:text="@string/not_detect"
-                    android:textColor="@color/colorDark" />
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_undefined"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/tajawal_medium"-->
+<!--                    android:text="@string/not_detect"-->
+<!--                    android:textColor="@color/colorDark" />-->
             </RadioGroup>
 
             <LinearLayout
@@ -393,8 +404,6 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -414,6 +423,28 @@
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/allow_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_viewMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/tajawal_medium"
+                android:gravity="center_vertical"
+                android:text="السماح بعرض رقم جوالك"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/allow_mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>

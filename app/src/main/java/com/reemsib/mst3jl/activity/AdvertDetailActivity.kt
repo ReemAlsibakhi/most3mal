@@ -504,6 +504,11 @@ class AdvertDetailActivity : AppCompatActivity(),View.OnClickListener {
         if(advert.accept_negotiation==1){
            tv_priceType.text=getString(R.string.allow_negotiation)
         }
+        if (advert.allow_to_show_mobile==1){
+            linear_mobile.visibility=View.VISIBLE
+        } else{
+            linear_mobile.visibility=View.GONE
+        }
 
         if (manager.isLoggedIn){
             if(advert.allow_reply==0 &&  !(manager.getUser().id==adverterId ) ){
@@ -552,7 +557,7 @@ class AdvertDetailActivity : AppCompatActivity(),View.OnClickListener {
            rv_Comments.visibility = View.VISIBLE
           there_comment.visibility = View.GONE
 
-            commentAdapter = CommentAdapter(this, commentList)
+            commentAdapter = CommentAdapter(this, commentList, adverterId!!)
             rv_Comments.adapter = commentAdapter
             commentAdapter!!.notifyDataSetChanged()
 

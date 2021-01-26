@@ -380,10 +380,12 @@
                             </LinearLayout>
 
                             <LinearLayout
+                                android:id="@+id/linear_mobile"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_10sdp"
-                                android:orientation="horizontal">
+                                android:orientation="horizontal"
+                                android:visibility="gone">
 
                                 <TextView
                                     android:id="@+id/tv_mobile"

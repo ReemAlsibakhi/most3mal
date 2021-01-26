@@ -25,7 +25,7 @@ class AllCategoryAdapter (var activity: Activity, var data: ArrayList<AllCategor
         mSubCatList=ArrayList()
     }
     interface OnItemClickListener {
-        fun onClicked(position: Int, id: Int, title: String)
+        fun onClicked(position: Int, subCategory: SubCategory)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
@@ -75,9 +75,9 @@ class AllCategoryAdapter (var activity: Activity, var data: ArrayList<AllCategor
 //            holder.expanSubcateg.toggle()
 //        }
         mSubCatAdapter!!.setOnItemClickListener(object :SubCategAdapter.OnItemClickListener{
-            override fun onClicked(clickedItemPosition: Int, id: Int, category: String) {
+            override fun onClicked(clickedItemPosition: Int,subCategory: SubCategory) {
                 if (mListener != null) {
-                mListener!!.onClicked(position , id ,category)
+                mListener!!.onClicked(position , subCategory)
                 }
             }
         })

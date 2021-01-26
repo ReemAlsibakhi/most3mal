@@ -35,6 +35,7 @@ class CitiesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cities)
         Hawk.init(this).build()
         myDialog=BaseActivity.loading(CitiesActivity@this)
+        btn_back.setOnClickListener { finish() }
         rv_city.layoutManager = LinearLayoutManager(this)
         getCities()
        if(Hawk.contains(Constants.CITIES)){

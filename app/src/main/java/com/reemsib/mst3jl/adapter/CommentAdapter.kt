@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class CommentAdapter(var activity: Activity, var data: ArrayList<Reviews>) :
+class CommentAdapter(var activity: Activity, var data: ArrayList<Reviews>,var adverterId:Int) :
     RecyclerView.Adapter<CommentAdapter.MyViewHolder>() {
     var mInterface: OnItemEditListener? = null
     private var manager: PreferencesManager = PreferencesManager(activity)
@@ -42,6 +42,7 @@ class CommentAdapter(var activity: Activity, var data: ArrayList<Reviews>) :
         val edit = itemView.tv_edit_comment
         val rate = itemView.rate
         val delete = itemView.tv_delete_comment
+        val relative_edit_delete=itemView.edit_delete
 
     }
 
@@ -66,13 +67,19 @@ class CommentAdapter(var activity: Activity, var data: ArrayList<Reviews>) :
         holder.date.text = getFormatDate(data[position].created_at)
         holder.rate.rating = data[position].rate.toFloat()
 
-        if (manager.isLoggedIn && (manager.getUser().id == data[position].user.id)){
-            holder.delete.visibility=View.VISIBLE
-            holder.edit.visibility=View.VISIBLE
+        if (manager.isLoggedIn){
+               if (manager.getUser().id==data[position].user.id){
+                   holder.relative_edit_delete.visibility=View.VISIBLE
+               }else if (manager.getUser().id==adverterId){
+                   holder.delete.visibility=View.VISIBLE
+                   holder.edit.visibility=View.GONE
+               }else{
+                   holder.relative_edit_delete.visibility=View.GONE
+               }
         }else{
-            holder.delete.visibility=View.GONE
-            holder.edit.visibility=View.GONE
+            holder.relative_edit_delete.visibility=View.GONE
         }
+
         holder.edit.setOnClickListener {
             if (mInterface != null) {
                 mInterface!!.onClicked(position, activity, data[position])

@@ -21,14 +21,10 @@ import com.orhanobut.hawk.Hawk
 import com.reemsib.mst3jl.R
 import com.reemsib.mst3jl.adapter.CountryAdapter
 import com.reemsib.mst3jl.model.Country
-import com.reemsib.mst3jl.model.MainCategory
 import com.reemsib.mst3jl.setting.MySingleton
 import com.reemsib.mst3jl.utils.BaseActivity
 import com.reemsib.mst3jl.utils.URLs
 import com.reemsib.mst3jl.utils.Constants
-import kotlinx.android.synthetic.main.custom_dialog_country_fragment.*
-import kotlinx.android.synthetic.main.custom_dialog_country_fragment.et_search
-import kotlinx.android.synthetic.main.fragment_home.*
 import org.json.JSONException
 import org.json.JSONObject
 

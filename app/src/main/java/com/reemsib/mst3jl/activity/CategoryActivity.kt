@@ -34,14 +34,13 @@ class CategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
         myDialog=BaseActivity.loading(CategoryActivity@this)
-
-
         getAllCate()
         if (Hawk.contains(Constants.ALL_CATEGORIES)){
             mCateAdapter = AllCategoryAdapter(this, Hawk.get(Constants.ALL_CATEGORIES))
             buildGridView()
 
         }
+        btn_back.setOnClickListener{finish()}
     }
 
     private fun getAllCate() {
@@ -96,10 +95,9 @@ class CategoryActivity : AppCompatActivity() {
         rv_categ.layoutManager = llm
         rv_categ.adapter = mCateAdapter
         mCateAdapter!!.setOnItemClickListener(object : AllCategoryAdapter.OnItemClickListener {
-            override fun onClicked(position: Int, id: Int, title: String) {
+            override fun onClicked(position: Int, subCategory: SubCategory) {
                 val resultIntent = Intent()
-                resultIntent.putExtra("catId", id)
-                resultIntent.putExtra("name_categ", title)
+                resultIntent.putExtra("category", subCategory)
                 setResult(RESULT_OK, resultIntent)
                 finish()
             }
@@ -112,7 +110,6 @@ class CategoryActivity : AppCompatActivity() {
             myDialog.dismiss()
         }
     }
-
     fun showDia() {
         if (!myDialog.isShowing) {
             myDialog.show()

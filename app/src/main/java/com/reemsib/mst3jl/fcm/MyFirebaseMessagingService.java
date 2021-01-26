@@ -5,29 +5,22 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Build;
 import android.util.Log;
-
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonReader;
 import com.reemsib.mst3jl.R;
 import com.reemsib.mst3jl.activity.AdvertDetailActivity;
 import com.reemsib.mst3jl.activity.chat.ChatRoomActivity;
 import com.reemsib.mst3jl.model.PushNotification;
 import com.reemsib.mst3jl.setting.PreferencesManager;
 import com.reemsib.mst3jl.utils.Constants;
-
 import org.jetbrains.annotations.NotNull;
-
-import java.io.StringReader;
 
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {

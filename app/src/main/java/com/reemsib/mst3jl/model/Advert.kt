@@ -17,11 +17,12 @@ data class Advert(
     var rate: String,
     var distance: Int,
     var images: ArrayList<Image>,
-    var category: Category,
+    var category: MainCategory,
     var user: User,
-    //  var year: ModelYear,
+    var year: ModelYear?,
    //  var company: Company,
     var city: City,
+    var allow_to_show_mobile: Int,
     var reviews: ArrayList<Reviews>,
     var created_at: String
 ):Parcelable {
@@ -40,11 +41,12 @@ data class Advert(
         parcel.readString()!!,
         parcel.readInt(),
         parcel.createTypedArrayList(Image.CREATOR) as ArrayList<Image>,
-        parcel.readParcelable(Category::class.java.classLoader)!!,
+        parcel.readParcelable(MainCategory::class.java.classLoader)!!,
         parcel.readParcelable(User::class.java.classLoader)!!,
-       // parcel.readParcelable(ModelYear::class.java.classLoader)!!,
+        parcel.readParcelable(ModelYear::class.java.classLoader),
 //        parcel.readParcelable(Company::class.java.classLoader)!!,
         parcel.readParcelable(City::class.java.classLoader)!!,
+        parcel.readInt(),
         parcel.createTypedArrayList(Reviews.CREATOR) as ArrayList<Reviews>,
         parcel.readString()!!
     ) {
@@ -69,9 +71,10 @@ data class Advert(
         parcel.writeTypedList(images)
         parcel.writeParcelable(category, flags)
         parcel.writeParcelable(user, flags)
-        //arcel.writeParcelable(year, flags)
+        parcel.writeParcelable(year, flags)
       //  parcel.writeParcelable(company, flags)
         parcel.writeParcelable(city, flags)
+        parcel.writeInt(allow_to_show_mobile)
         parcel.writeTypedList(reviews)
         parcel.writeString(created_at)
     }

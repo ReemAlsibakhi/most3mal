@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Response
@@ -16,7 +15,6 @@ import com.google.gson.JsonParser
 import com.orhanobut.hawk.Hawk
 import com.reemsib.mst3jl.R
 import com.reemsib.mst3jl.adapter.ModelAdapter
-import com.reemsib.mst3jl.model.MainCategory
 import com.reemsib.mst3jl.model.ModelYear
 import com.reemsib.mst3jl.setting.MySingleton
 import com.reemsib.mst3jl.utils.BaseActivity

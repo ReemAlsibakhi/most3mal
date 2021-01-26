@@ -3,7 +3,7 @@ package com.reemsib.mst3jl.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class ModelYear(var id:Int, var year:String):Parcelable {
+data class ModelYear(var id:Int, var year:String?):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!

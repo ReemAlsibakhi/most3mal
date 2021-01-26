@@ -148,7 +148,7 @@
     </array>
     <string name="title_activity_maps">Map</string>
     <string name="allow_location">من فضلك اسمح  بعرض موقعك</string>
-    <string name="select_model">اختر موديل السيارة(اختياري)</string>
+    <string name="select_model">اختر موديل السيارة</string>
     <string name="updateData">"تحديث بياناتي "</string>
     <string name="enter_mobile1">"أدخل رقم الموبايل "</string>
     <string name="km">كم</string>

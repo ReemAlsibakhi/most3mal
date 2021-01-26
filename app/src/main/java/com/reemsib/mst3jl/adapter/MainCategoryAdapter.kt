@@ -24,8 +24,10 @@ class MainCategoryAdapter(
     private val VIEW_TYPE_ITEM = 1
     private var selectedPos = RecyclerView.NO_POSITION
     var mListener: OnItemClickListener? = null
+
     interface OnItemClickListener {
-        fun onClicked(clickedItemPosition: Int, id: Int, name: String)
+        fun onClicked(clickedItemPosition: Int, id: Int, name: String,has_models:Int)
+     //   fun onClicked(clickedItemPosition: Int, id: Int, name: String)
     }
     fun setOnItemClickListener(listener: OnItemClickListener) {
         mListener = listener
@@ -95,7 +97,8 @@ class MainCategoryAdapter(
                 mListener!!.onClicked(
                     position,
                     data[position].id,
-                    data[position].name
+                    data[position].name,
+                    data[position].has_models
                 )
             }
         }
@@ -115,7 +118,7 @@ class MainCategoryAdapter(
             notifyDataSetChanged();
 
             if (mListener != null) {
-                mListener!!.onClicked(selectedPos, data[position].id, data[position].name,)
+                mListener!!.onClicked(selectedPos, data[position].id, data[position].name,data[position].has_models)
             }
 
 //            notifyItemChanged(selectedPos);

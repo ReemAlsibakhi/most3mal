@@ -24,8 +24,8 @@ import com.reemsib.mst3jl.R
 import com.reemsib.mst3jl.adapter.*
 import com.reemsib.mst3jl.fragment.ModelBottomSheetFragment
 import com.reemsib.mst3jl.model.Advert
-import com.reemsib.mst3jl.model.Company
 import com.reemsib.mst3jl.model.MainCategory
+import com.reemsib.mst3jl.model.Company
 import com.reemsib.mst3jl.model.SubCategory
 import com.reemsib.mst3jl.setting.MySingleton
 import com.reemsib.mst3jl.setting.PreferencesManager
@@ -166,7 +166,7 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
         rv_main_category.adapter = mMainCategoryAdapter
         mMainCategoryAdapter!!.setOnItemClickListener(object :
             MainCategoryAdapter.OnItemClickListener {
-            override fun onClicked(clickedItemPosition: Int, id: Int, name: String) {
+            override fun onClicked(clickedItemPosition: Int, id: Int, name: String,has_models:Int) {
                 Log.e("main_category_id", "$clickedItemPosition,$id")
                 subCat = ""
                 if (clickedItemPosition==-1){
@@ -174,9 +174,16 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
                }else{
                    mainCatId = id.toString()
                }
+                if (has_models==1){
+                    tv_model.visibility=View.VISIBLE
+                }else{
+                    tv_model.visibility=View.GONE
+                }
                 getSubCategories(URLs.URL_SUB_CATEGORIES_TO_CATEGORY + id.toString())
                 filterAdverts()
             }
+
+
         })
     }
     private fun listenerEdit() {
@@ -385,6 +392,8 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
         mSubCatList.clear()
         val stringRequest = object : StringRequest(Method.GET, url,
             Response.Listener { response ->
+                var subCat:SubCategory ?=null
+
                 try {
                     val obj = JSONObject(response)
                     if (obj.getBoolean("status")) {
@@ -392,12 +401,17 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
                         for (i in 0 until jsonArray.length()) {
                             val jsObj = jsonArray.getJSONObject(i)
                             val mJson = JsonParser().parse(jsObj.toString())
-                            val subCat =
-                                Gson().fromJson<Any>(mJson, SubCategory::class.java) as SubCategory
+                             subCat = Gson().fromJson<Any>(mJson, SubCategory::class.java) as SubCategory
                             mSubCatList.add(subCat)
 
                         }
+                        if (subCat!!.has_models==1){
+                            tv_model.visibility=View.VISIBLE
+                        }else{
+                            tv_model.visibility=View.GONE
+                        }
                         mSubcategAdapter!!.notifyDataSetChanged()
+
                        // Hawk.put(Constants.SUB_CATEGORIES, mSubCatList)
                     }
                 } catch (e: JSONException) {
@@ -440,7 +454,7 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
                         } else {
                             sliderView.visibility = View.VISIBLE
                         }
-                  //      buildPiadSlider()
+                  //  buildPiadSlider()
 
                     }
                 } catch (e: JSONException) {
@@ -544,6 +558,7 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
         sliderView.indicatorSelectedColor = Color.WHITE
         sliderView.indicatorUnselectedColor = Color.GRAY
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM)
+    //    sliderView.scrollTimeInSec = 10; //set scroll delay in seconds :
         mPaidAdvAdapter!!.setOnItemClickListener(object :
             SliderPaidAdvertAdapter.OnItemClickListener {
             override fun onClicked(clickedItemPosition: Int, id: Int) {

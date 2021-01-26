@@ -20,7 +20,7 @@ public class Advert0 implements Parcelable {
     private Boolean in_favorite;
     private Integer rate;
     private ArrayList<Image> images;
-    private Category category;
+    private MainCategory mainCategory;
     private User user;
     private ModelYear year;
     //   var company: Company,
@@ -136,12 +136,12 @@ public class Advert0 implements Parcelable {
         this.images = images;
     }
 
-    public Category getCategory() {
-        return category;
+    public MainCategory getMainCategory() {
+        return mainCategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setMainCategory(MainCategory mainCategory) {
+        this.mainCategory = mainCategory;
     }
 
     public User getUser() {
@@ -227,7 +227,7 @@ public class Advert0 implements Parcelable {
             rate = in.readInt();
         }
         images = in.createTypedArrayList(Image.CREATOR);
-        category = in.readParcelable(Category.class.getClassLoader());
+        mainCategory = in.readParcelable(MainCategory.class.getClassLoader());
         user = in.readParcelable(User.class.getClassLoader());
         year = in.readParcelable(ModelYear.class.getClassLoader());
         city = in.readParcelable(City.class.getClassLoader());
@@ -302,7 +302,7 @@ public class Advert0 implements Parcelable {
             parcel.writeInt(rate);
         }
         parcel.writeTypedList(images);
-        parcel.writeParcelable(category, i);
+        parcel.writeParcelable(mainCategory, i);
         parcel.writeParcelable(user, i);
         parcel.writeParcelable(year, i);
         parcel.writeParcelable(city, i);

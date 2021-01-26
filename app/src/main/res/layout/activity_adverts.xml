@@ -112,6 +112,7 @@
 
         <TextView
             android:id="@+id/tv_model"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_3sdp"
@@ -127,10 +128,10 @@
         android:id="@+id/sliderView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
-        app:sliderAnimationDuration="600"
+        app:sliderAnimationDuration="300"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderAutoCycleEnabled="true"
-        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorAnimationDuration="300"
         app:sliderIndicatorGravity="center_horizontal|bottom"
         app:sliderIndicatorMargin="15dp"
         app:sliderIndicatorOrientation="horizontal"

@@ -3,7 +3,7 @@ package com.reemsib.mst3jl.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class SubCategory(var id:Int, var name:String,var has_models:Int):Parcelable {
+data class SubCategory(var id:Int, var name:String,var has_models:Int?):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,
@@ -14,7 +14,7 @@ data class SubCategory(var id:Int, var name:String,var has_models:Int):Parcelabl
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
         parcel.writeString(name)
-        parcel.writeInt(has_models)
+        parcel.writeInt(has_models!!)
     }
 
     override fun describeContents(): Int {

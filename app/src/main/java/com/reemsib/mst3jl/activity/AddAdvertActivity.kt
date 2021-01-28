@@ -93,6 +93,7 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         tv_cityTit.setText(advert.city.title)
         categoryId=advert.category.id.toString()
         cityId=advert.city.id.toString()
+
         if (advert.category.has_models==1){
             select_model_Car.visibility=View.VISIBLE
             if (advert.year!=null){
@@ -463,7 +464,6 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
          val category=tv_category.text.toString()
          val city=tv_cityTit.text.toString()
          val model=tv_model.text.toString()
-
         val negotiation = cb_negotiation.isChecked
         val allowReply = allow_reply.isChecked
         val allowLocation = allow_location.isChecked
@@ -516,12 +516,11 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
                 valid = false
 
             }
-
-            priceType.isEmpty()->{
+           priceType.isEmpty()->{
                  Toast.makeText(this, getString(R.string.choose_price), Toast.LENGTH_LONG).show()
                 valid = false
             }
-            priceType=="fixed" && price!!.isEmpty()-> {
+           priceType=="fixed" && price!!.isEmpty()-> {
 //                if (price!!.isEmpty()) {
                 et_price.error = getString(R.string.enter_price)
                 valid = false
@@ -531,12 +530,12 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
                 Toast.makeText(this, getString(R.string.allow_location), Toast.LENGTH_LONG).show()
                 valid = false
             }
-            subCat!!.has_models==1 && yearId=="" -> {
+            subCat!=null->{
+               if( subCat!!.has_models==1 && yearId==""){
                     Toast.makeText(this, getString(R.string.select_model), Toast.LENGTH_LONG).show()
                     valid = false
-
+                }
             }
-
 
         }
         return valid

@@ -557,6 +557,7 @@ class AdvertsActivity : AppCompatActivity(), View.OnClickListener{
         sliderView.setSliderAdapter(mPaidAdvAdapter!!)
         sliderView.indicatorSelectedColor = Color.WHITE
         sliderView.indicatorUnselectedColor = Color.GRAY
+        sliderView.setScrollTimeInSec(3); //set scroll delay in seconds :
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM)
     //    sliderView.scrollTimeInSec = 10; //set scroll delay in seconds :
         mPaidAdvAdapter!!.setOnItemClickListener(object :

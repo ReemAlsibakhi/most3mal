@@ -444,6 +444,8 @@ class AdvertDetailActivity : AppCompatActivity(),View.OnClickListener {
                 val map = HashMap<String, String>()
                 map["Accept"] = "application/json"
                 map["Content-Type"] = "application/json"
+                map["Authorization"]="Bearer " + PreferencesManager(applicationContext).getAccessToken()
+
 
                 return map
             }

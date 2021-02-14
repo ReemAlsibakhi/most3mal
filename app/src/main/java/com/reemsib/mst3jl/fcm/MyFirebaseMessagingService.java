@@ -31,6 +31,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private int reviewsCurrentCount;
     private int chatsCurrentCount;
     PushNotification pushNot;
+    JsonParser parser;
+    Gson gson;
+    JsonElement mJson;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
@@ -39,6 +42,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.e(TAG, "Msg received From: " + remoteMessage.getFrom());
 
         manager=new PreferencesManager(getApplicationContext());
+         gson = new Gson();
+        parser = new JsonParser();
         reviewsCurrentCount=manager.getRevsCount();
         chatsCurrentCount=manager.getChatsCount();
         Log.e("chat",chatsCurrentCount+"");
@@ -47,17 +52,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         //Here notification is recieved from server
        if (remoteMessage.getData().size() > 0 ) {
             Log.e("Message_payload",remoteMessage.getData().toString());
-          //  pushNot=new PushNotification(remoteMessage.getData().get("body"),remoteMessage.getData().get("type"),remoteMessage.getData().get("title"),remoteMessage.getData().get("target_id"),remoteMessage.getData().get("msgType"));
-           JsonParser parser = new JsonParser();
-           JsonElement mJson = parser.parse(remoteMessage.getData().get("moreData").toString());
-           Gson gson = new Gson();
+            mJson = parser.parse(remoteMessage.getData().get("moreData").toString());
            pushNot = gson.fromJson(mJson, PushNotification.class);
            showNotification(pushNot);
         }
        if (remoteMessage.getNotification()!=null){
-             JsonParser parser = new JsonParser();
-             JsonElement mJson = parser.parse(remoteMessage.getData().get("notification").toString());
-             Gson gson = new Gson();
+              mJson = parser.parse(remoteMessage.getData().get("notification").toString());
              pushNot = gson.fromJson(mJson, PushNotification.class);
              showNotification(pushNot);
        }

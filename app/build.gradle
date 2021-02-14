@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    repositories {
+        mavenCentral()
+    }
 }
 
 dependencies {
@@ -79,8 +82,9 @@ dependencies {
     implementation 'com.github.koushikcse:LoadingButton:1.7'
 
 //    implementation 'com.github.dmallcott:DismissibleImageView:1.0.1'
+//    implementation 'com.loopj.android:android-async-http:1.4.10'
+    implementation 'com.loopj.android:android-async-http:1.4.11'
 
-    implementation 'com.loopj.android:android-async-http:1.4.10'
 //    implementation 'com.cometchat:pro-android-chat-sdk:2.1.5'
 
 //    implementation "com.jakewharton:butterknife:10.1.0"

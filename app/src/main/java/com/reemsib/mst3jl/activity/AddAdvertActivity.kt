@@ -49,7 +49,7 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
     var price:String ?=null
     lateinit var  acceptNego:String
     lateinit var  allowRep :String
-    lateinit var  allowShowMobile :String
+     var allowShowMobile :String="0"
     var offerLoc :String="0"
     lateinit var  fromUpdate :String
     private var customDialogModel = ModelBottomSheetFragment()
@@ -233,10 +233,9 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         val client = AsyncHttpClient()
         val BASE_URL = "http://mst3jl.com/api/updateAdvertisement/"
         client.addHeader("Accept", "application/json")
-        client.addHeader(
-            "Authorization",
-            "Bearer " + PreferencesManager(applicationContext).getAccessToken()
-        )
+     //   client.addHeader("Content-Type", "application/json")
+        client.addHeader("Authorization", "Bearer " + PreferencesManager(applicationContext).getAccessToken())
+
         client.connectTimeout = 10 * 1000 * 60
         client.responseTimeout = 10 * 1000 * 60
 
@@ -248,8 +247,8 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         params.put("accept_negotiation", acceptNego)
         params.put("allow_reply", allowRep)
         params.put("allow_offer_location", offerLoc)
-        params.put("lat", "123456")
-        params.put("lng", "123456")
+        params.put("lat", manager.getlng())
+        params.put("lng",manager.getlng())
         params.put("category_id", categoryId)
         params.put("city_id", cityId)
         params.put("year_id", yearId)
@@ -350,9 +349,8 @@ class AddAdvertActivity : AppCompatActivity(), IPickResult, View.OnClickListener
         val client = AsyncHttpClient()
         val BASE_URL = "http://mst3jl.com/api/createAdvertisement"
         client.addHeader("Accept", "application/json")
-        client.addHeader(
-            "Authorization",
-            "Bearer " + PreferencesManager(applicationContext).getAccessToken()
+      //  client.addHeader("Content-Type", "application/json")
+        client.addHeader("Authorization", "Bearer " + PreferencesManager(applicationContext).getAccessToken()
         )
         client.connectTimeout = 10 * 1000 * 60
         client.responseTimeout = 10 * 1000 * 60
